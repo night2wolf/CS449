@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Umpirebuddyv1_tklinkenberg</string>
+    <string name="Reset">Reset</string>
+    <string name="BallBtn">Add Balls</string>
+    <string name="StrikeBtn">Add Strikes</string>
+    <string name="About">About</string>
+</resources>
