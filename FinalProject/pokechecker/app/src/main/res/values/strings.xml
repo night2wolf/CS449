@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PokeChecker</string>
+    <string name="search">search</string>
+    <string name="search_text">Look for Pokemon</string>
+    <string name="type">Type(s)</string>
+    <string name="strength">Strong Against</string>
+    <string name="weakness">Weak Against</string>
 </resources>
