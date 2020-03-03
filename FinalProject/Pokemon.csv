@@ -1,50 +1,950 @@
-﻿Name,Type1,Type2,Stage1,Evolve1,Stage2,Evolve2,Stage3,Image,Resource:,https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_by_National_Pok%C3%A9dex_number#List_of_Pok.C3.A9mon_by_National_Pok.C3.A9dex_number
-Bulbasaur,Grass,Poison,,,,,,,,
-Ivysaur,Grass,Poison,,,,,,,,
-Venusaur,Grass,Poison,,,,,,,,
-Charmander,Fire,Null,,,,,,,,
-Charmeleon,Fire,Null,,,,,,,,
-Charizard,Fire,Flying,,,,,,,,
-Squirtle,Water,Null,,,,,,,,
-Wartortle,Water,Null,,,,,,,,
-Blastoise,Water,Null,,,,,,,,
-Caterpie,Bug,Null,,,,,,,,
-Metapod,Bug,Null,,,,,,,,
-Butterfree,Bug,Flying,,,,,,,,
-Weedle,Bug,Poison,,,,,,,,
-Kakuna,Bug,Poison,,,,,,,,
-Beedrill,Bug,Poison,,,,,,,,
-Pidgey,Normal,Flying,,,,,,,,
-Pidgeotto,Normal,Flying,,,,,,,,
-Pidgeotto,Normal,Flying,,,,,,,,
-Rattata,Normal,Null,,,,,,,,
-Rattata (alolan form),Normal,Dark,,,,,,,,
-Raticate,Normal,Null,,,,,,,,
-Raticate (alolan form),Normal,Dark,,,,,,,,
-Spearow,Normal,Flying,,,,,,,,
-Fearow,Normal,Flying,,,,,,,,
-Ekans,Poison,Null,,,,,,,,
-Arbok,Poison,Null,,,,,,,,
-Pikachu,Electric,Null,,,,,,,,
-Raichu,Electric,Null,,,,,,,,
-Raichu (alolan form),Electric,Psychic,,,,,,,,
-Sandshrew,Ground,Null,,,,,,,,
-Sandshrew (alolan form),Ice,Steel,,,,,,,,
-Sandslash,Ground,Null,,,,,,,,
-Sandslash (alolan form),Ice,Steel,,,,,,,,
-Nidoran (female),Poison,Null,,,,,,,,
-Nidorina,Poison,Null,,,,,,,,
-Nidoqueen,Poison,Ground,,,,,,,,
-Nidoran (male),Poison,Null,,,,,,,,
-Nidorino,Poison,Null,,,,,,,,
-Nidoking,Poison,Ground,,,,,,,,
-Clefairy,Fairy,Null,,,,,,,,
-Clefable,Fairy,Null,,,,,,,,
-Vulpix,Fire,Null,,,,,,,,
-Vulpix (alolan form),Ice,Null,,,,,,,,
-Ninetales,Fire,Null,,,,,,,,
-Ninetales (alolan form),Ice,Fairy,,,,,,,,
-Jigglypuff,Normal,Fairy,,,,,,,,
-Wigglytuff,Normal,Fairy,,,,,,,,
-Zubat,Poison,Flying,,,,,,,,
-Goldbat,Poison,Flying,,,,,,,,
+_id,Name,Type1,Type2,Stage1,Evolve1,Stage2,Evolve2,Stage3
+1,Bulbasaur,Grass,Poison,Bulbasaur,Level 16,Ivysaur,Level 32,Venusaur
+2,Ivysaur,Grass,Poison,Bulbasaur,Level 16,Ivysaur,Level 32,Venusaur
+3,Venusaur,Grass,Poison,Bulbasaur,Level 16,Ivysaur,Level 32,Venusaur
+4,Charmander,Fire,Null,Charmander,Level 16,Charmeleon,Level 36,Charizard
+5,Charmeleon,Fire,Null,Charmander,Level 16,Charmeleon,Level 36,Charizard
+6,Charizard,Fire,Flying,Charmander,Level 16,Charmeleon,Level 36,Charizard
+7,Squirtle,Water,Null,Squirtle,Level 16,Wartortle,Level 36,Blastoise
+8,Wartortle,Water,Null,Squirtle,Level 16,Wartortle,Level 36,Blastoise
+9,Blastoise,Water,Null,Squirtle,Level 16,Wartortle,Level 36,Blastoise
+10,Caterpie,Bug,Null,Caterpie,Level 7,Metapod,Level 10,Butterfree
+11,Metapod,Bug,Null,Caterpie,Level 7,Metapod,Level 10,Butterfree
+12,Butterfree,Bug,Flying,Caterpie,Level 7,Metapod,Level 10,Butterfree
+13,Weedle,Bug,Poison,Weedle,Level 7,Kakuna,Level 10,Beedrill
+14,Kakuna,Bug,Poison,Weedle,Level 7,Kakuna,Level 10,Beedrill
+15,Beedrill,Bug,Poison,Weedle,Level 7,Kakuna,Level 10,Beedrill
+16,Pidgey,Normal,Flying,Pidgey,Level 18,Pidgeotto,Level 36,Pidgeot
+17,Pidgeotto,Normal,Flying,Pidgey,Level 18,Pidgeotto,Level 36,Pidgeot
+18,Pidgeot,Normal,Flying,Pidgey,Level 18,Pidgeotto,Level 36,Pidgeot
+19,Rattata,Normal,Null,Rattata,Level 20,Raticate,Null,Null
+20,Rattata (alolan form),Normal,Dark,Rattata (alolan form),Level 20 at night,Raticate (alolan form),Null,Null
+21,Raticate,Normal,Null,Rattata,Level 20,Raticate,Null,Null
+22,Raticate (alolan form),Normal,Dark,Rattata (alolan form),Level 20 at night,Raticate (alolan form),Null,Null
+23,Spearow,Normal,Flying,Spearow,Level 20,Fearow,Null,Null
+24,Fearow,Normal,Flying,Spearow,Level 20,Fearow,Null,Null
+25,Ekans,Poison,Null,Ekans,Level 22,Arbok,Null,Null
+26,Arbok,Poison,Null,Ekans,Level 22,Arbok,Null,Null
+27,Pikachu,Electric,Null,Pichu,Friendship,Pikachu,Thunderstone,Raichu
+28,Raichu,Electric,Null,Pichu,Friendship,Pikachu,Thunderstone,Raichu
+29,Raichu (alolan form),Electric,Psychic,Pichu,Friendship,Pikachu,Thunderstone in alola,Raichu (alolan form)
+30,Sandshrew,Ground,Null,Sandshrew,Level 22,Sandslash,Null,Null
+31,Sandshrew (alolan form),Ice,Steel,Sandshrew (alolan form),Ice Stone,Sandslash (alolan form),Null,Null
+32,Sandslash,Ground,Null,Sandshrew,Level 22,Sandslash,Null,Null
+33,Sandslash (alolan form),Ice,Steel,Sandshrew (alolan form),Ice Stone,Sandslash (alolan form),Null,Null
+34,Nidoran (female),Poison,Null,Nidoran (female),Level 16,Nidorina,Moon Stone,Nidoqueen
+35,Nidorina,Poison,Null,Nidoran (female),Level 16,Nidorina,Moon Stone,Nidoqueen
+36,Nidoqueen,Poison,Ground,Nidoran (female),Level 16,Nidorina,Moon Stone,Nidoqueen
+37,Nidoran (male),Poison,Null,Nidoran (male),Level 16,Nidorino,Moon Stone,Nidoking
+38,Nidorino,Poison,Null,Nidoran (male),Level 16,Nidorino,Moon Stone,Nidoking
+39,Nidoking,Poison,Ground,Nidoran (male),Level 16,Nidorino,Moon Stone,Nidoking
+40,Clefairy,Fairy,Null,Cleffa,Friendship,Clefairy,Moon Stone,Clefable
+41,Clefable,Fairy,Null,Cleffa,Friendship,Clefairy,Moon Stone,Clefable
+42,Vulpix,Fire,Null,Vulpix,Fire Stone,Ninetales,Null,Null
+43,Vulpix (alolan form),Ice,Null,Vulpix (alolan form),Ice Stone,Ninetales (alolan form),Null,Null
+44,Ninetales,Fire,Null,Vulpix,Fire Stone,Ninetales,Null,Null
+45,Ninetales (alolan form),Ice,Fairy,Vulpix (alolan form),Ice Stone,Ninetales (alolan form),Null,Null
+46,Jigglypuff,Normal,Fairy,Igglybuff,Friendship,Jigglypuff,Moon Stone,Wigglytuff
+47,Wigglytuff,Normal,Fairy,Igglybuff,Friendship,Jigglypuff,Moon Stone,Wigglytuff
+48,Zubat,Poison,Flying,Zubat,Level 22,Golbat,Friendship,Crobat
+49,Goldbat,Poison,Flying,Zubat,Level 22,Golbat,Friendship,Crobat
+50,Oddish,Grass,Poison,Oddish,Level 21,Gloom,Leaf Stone,Vileplume
+51,Gloom,Grass,Poison,Oddish,Level 21,Gloom,Sun Stone,Bellossom
+52,Vileplume,Grass,Poison,Oddish,Level 21,Gloom,Leaf Stone,Vileplume
+53,Paras,Bug,Grass,Paras,Level 24,Parasect,Null,Null
+54,Parasect,Bug,Grass,Paras,Level 24,Parasect,Null,Null
+55,Venonat,Bug,Poison,Venonat,Level 31,Venomoth,Null,Null
+56,Venomoth,Bug,Poison,Venonat,Level 31,Venomoth,Null,Null
+57,Diglett,Ground,Null,Diglett,Level 26,Dugtrio,Null,Null
+58,Diglett (alolan form),Ground,Steel,Diglett (alolan form),Level 26,Dugtrio (alolan form),Null,Null
+59,Dugtrio,Ground,Null,Diglett,Level 26,Dugtrio,Null,Null
+60,Dugtrio (alolan form),Ground,Steel,Diglett (alolan form),Level 26,Dugtrio (alolan form),Null,Null
+61,Meowth,Normal,Null,Meowth,Level 28,Persian,Null,Null
+62,Meowth (alolan form),Dark,Null,Meowth (alolan form),Level 28 and Friendship,Persian (alolan form),Null,Null
+63,Meowth (galar form),Steel,Null,Meowth (galar form),Level 28,Perrserker,Null,Null
+64,Persian,Normal,Null,Meowth,Level 28,Persian,Null,Null
+65,Persian (alolan form),Dark,Null,Meowth (alolan form),Level 28 and Friendship,Persian (alolan form),Null,Null
+66,Psyduck,Water,Null,Psyduck,Level 33,Golduck,Null,Null
+67,Golduck,Water,Null,Psyduck,Level 33,Golduck,Null,Null
+68,Mankey,Fighting,Null,Mankey,Level 28,Primeape,Null,Null
+69,Primeape,Fighting,Null,Mankey,Level 28,Primeape,Null,Null
+70,Growlithe,Fire,Null,Growlithe,Fire Stone,Arcanine,Null,Null
+71,Arcanine,Fire,Null,Growlithe,Fire Stone,Arcanine,Null,Null
+72,Poliwag,Water,Null,Poliwag,Level 25,Poliwhirl,Water Stone,Poliwrath
+73,Poliwhirl,Water,Null,Poliwag,Level 25,Poliwhirl,Trade holding King's Rock,Politoed
+74,Poliwrath,Water,Fighting,Poliwag,Level 25,Poliwhirl,Water Stone,Poliwrath
+75,Abra,Psychic,Null,Abra,Level 16,Kadabra,Trade,Alakazam
+76,Kadabra,Psychic,Null,Abra,Level 16,Kadabra,Trade,Alakazam
+77,Alakazam,Psychic,Null,Abra,Level 16,Kadabra,Trade,Alakazam
+78,Machop,Fighting,Null,Machop,Level 28,Machoke,Trade,Machamp
+79,Machoke,Fighting,Null,Machop,Level 28,Machoke,Trade,Machamp
+80,Machamp,Fighting,Null,Machop,Level 28,Machoke,Trade,Machamp
+81,Bellsprout,Grass,Poison,Bellsprout,Level 21,Weepinbell,Leaf Stone,Victreebel
+82,Weepinbell,Grass,Poison,Bellsprout,Level 21,Weepinbell,Leaf Stone,Victreebel
+83,Victreebel,Grass,Poison,Bellsprout,Level 21,Weepinbell,Leaf Stone,Victreebel
+84,Tentacool,Water,Poison,Tentacool,Level 30,Tentacruel,Null,Null
+85,Tentacruel,Water,Poison,Tentacool,Level 30,Tentacruel,Null,Null
+86,Geodude,Rock,Ground,Geodude,Level 25,Graveler,Trade,Golem
+87,Geodude (alolan form),Rock,Electric,Geodude (alolan form),Level 25,Graveler (alolan form),Trade,Golem (alolan form)
+88,Graveler,Rock,Ground,Geodude,Level 25,Graveler,Trade,Golem
+89,Graveler (alolan form),Rock,Electric,Geodude (alolan form),Level 25,Graveler (alolan form),Trade,Golem (alolan form)
+90,Golem,Rock,Ground,Geodude,Level 25,Graveler,Trade,Golem
+91,Golem (alolan form),Rock,Electric,Geodude (alolan form),Level 25,Graveler (alolan form),Trade,Golem (alolan form)
+92,Ponyta,Fire,Null,Ponyta,Level 40,Rapidash,Null,Null
+93,Ponyta (galar form),Psychic,Null,Ponyta (galar form),Level 40,Rapidash (galar form),Null,Null
+94,Rapidash,Fire,Null,Ponyta,Level 40,Rapidash,Null,Null
+95,Rapidash (galar form),Psychic,Fairy,Ponyta (galar form),Level 40,Rapidash (galar form),Null,Null
+96,Slowpoke,Water,Psychic,Slowpoke,Level 37,Slowbro,Null,Null
+97,Slowpoke (galar form),Psychic,Null,Slowpoke (galar form),Null,Null,Null,Null
+98,Slowbro,Water,Psychic,Slowpoke,Level 37,Slowbro,Null,Null
+99,Magnemite,Electric,Steel,Magnemite,Level 30,Magneton,Level up in area with magnetic field,Magnezone
+100,Magneton,Electric,Steel,Magnemite,Level 30,Magneton,Level up in area with magnetic field,Magnezone
+101,Farfetch'd,Normal,Flying,Farfetch'd,Null,Null,Null,Null
+102,Farfetch'd (galar form),Fighting,Null,Farfetch'd (galar form),3 critical hit in one battle,Sirfetch'd,Null,Null
+103,Doduo,Normal,Flying,Doduo,Level 31,Dodrio,Null,Null
+104,Dodrio,Normal,Flying,Doduo,Level 31,Dodrio,Null,Null
+105,Seel,Water,Null,Seel,Level 34,Dewgong,Null,Null
+106,Dewgong,Water,Ice,Seel,Level 34,Dewgong,Null,Null
+107,Grimer,Poison,Null,Grimer,Level 38,Muk,Null,Null
+108,Grimer (alolan form),Poison,Dark,Grimer (alolan form),Level 38,Muk (alolan form),Null,Null
+109,Muk,Poison,Null,Grimer,Level 38,Muk,Null,Null
+110,Muk (alolan form),Poison,Dark,Grimer (alolan form),Level 38,Muk (alolan form),Null,Null
+111,Shelder,Water,Null,Shelder,Water Stone,Cloyster,Null,Null
+112,Cloyster,Water,Ice,Shelder,Water Stone,Cloyster,Null,Null
+113,Gastly,Ghost,Poison,Gastly,Level 25,Haunter,Trade,Gengar
+114,Haunter,Ghost,Poison,Gastly,Level 25,Haunter,Trade,Gengar
+115,Gengar,Ghost,Poison,Gastly,Level 25,Haunter,Trade,Gengar
+116,Onix,Rock,Ground,Onix,Trade with Metal Coat,Steelix,Null,Null
+117,Drowzee,Psychic,Null,Drowzee,Level 26,Hypno,Null,Null
+118,Hypno,Psychic,Null,Drowzee,Level 26,Hypno,Null,Null
+119,Krabby,Water,Null,Krabby,Level 28,Kingler,Null,Null
+120,Kingler,Water,Null,Krabby,Level 28,Kingler,Null,Null
+121,Voltorb,Electric,Null,Voltorb,Level 30,Electrode,Null,Null
+122,Electrode,Electric,Null,Voltorb,Level 30,Electrode,Null,Null
+123,Exeggcute,Grass,Psychic,Exeggcute,Leaf Stone,Exeggutor,Null,Null
+124,Exeggutor,Grass,Psychic,Exeggcute,Leaf Stone,Exeggutor,Null,Null
+125,Exeggutor (alolan form),Grass,Dragon,Exeggcute,Leaf Stone in Alola,Exeggutor (alolan form),Null,Null
+126,Cubone,Ground,Null,Cubone,Level 28,Marowak,Null,Null
+127,Marowak,Ground,Null,Cubone,Level 28,Marowak,Null,Null
+128,Marowak (alolan form),Fire,Ghost,Cubone,Level 28 in Alola at night,Marowak (alolan form),Null,Null
+129,Hitmonlee,Fighting,Null,Tyrogue,Level 20 and Attack > Defense,Hitmonlee,Null,Null
+130,Hitmonchan,Fighting,Null,Tyrogue,Level 20 and Attack > Defense,Hitmonchan,Null,Null
+131,Lickitung,Normal,Null,Lickitung,Level up knowing Rollout,Lickilicky,Null,Null
+132,Koffing,Poison,Null,Koffing,Level 35,Weezing,Null,Null
+133,Weezing,Poison,Null,Koffing,Level 35,Weezing,Null,Null
+134,Weezing (galar form),Poison,Fairy,Koffing,Level 35 in Galar,Weezing (galar form),Null,Null
+135,Rhyhorn,Ground,Rock,Rhyhorn,Level 42,Rhydon,Trade holding Protector,Rhyperior
+136,Rhydon,Ground,Rock,Rhyhorn,Level 42,Rhydon,Trade holding Protector,Rhyperior
+137,Chansey,Normal,Null,Happiny,Level up holding Oval Stone in the Daytime,Chansey,Friendship,Blissey
+138,Tangela,Grass,Null,Tangela,Level up knowing Ancient Power,Tangrowth,Null,Null
+139,Kangaskhan,Normal,Null,Kangaskhan,Null,Null,Null,Null
+140,Horsea,Water,Null,Horsea,Level 32,Seadra,Trade holding Dragon Scale,Kingdra
+141,Seadra,Water,Null,Horsea,Level 32,Seadra,Trade holding Dragon Scale,Kingdra
+142,Goldeen,Water,Null,Goldeen,Level 33,Seaking,Null,Null
+143,Seaking,Water,Null,Goldeen,Level 33,Seaking,Null,Null
+144,Staryu,Water,Null,Staryu,Water Stone,Starmie,Null,Null
+145,Starmie,Water,Psychic,Staryu,Water Stone,Starmie,Null,Null
+146,Mr. Mime,Psychic,Fairy,Mime Jr.,Level up knowing Mimic,Mr. Mime,Null,Null
+147,Mr. Mime (galar form),Ice,Psychic,Mime Jr.,Level up knowing Mimic,Mr. Mime (galar form),Level 42,Mr. Rime
+148,Scyther,Bug,Flying,Scyther,Trade holding Metal Coat,Scizor,Null,Null
+149,Jynx,Ice,Psychic,Smoochum,Level 30,Jynx,Null,Null
+150,Electabuzz,Electric,Null,Elekid,Level 30,Electabuzz,Trade holding Electirizer,Electivire
+151,Magmar,Fire,Null,Magby,Level 30,Magmar,Trade holding Magmarizer,Magmortar
+152,Pinsir,Bug,Null,Pinsir,Null,Null,Null,Null
+153,Tauros,Normal,Null,Tauros,Null,Null,Null,Null
+154,Magikarp,Water,Null,Magikarp,Level 20,Gyarados,Null,Null
+155,Gyarados,Water,Flying,Magikarp,Level 20,Gyarados,Null,Null
+156,Lapras,Water,Ice,Lapras,Null,Null,Null,Null
+157,Ditto,Normal,Null,Ditto,Null,Null,Null,Null
+158,Eevee,Normal,Null,Eevee,Various (see forms),Null,Null,Null
+159,Vaporeon,Water,Null,Eevee,Water Stone,Vaporeon,Null,Null
+160,Jolteon,Electric,Null,Eevee,Thunder Stone,Jolteon,Null,Null
+161,Flareon,Fire,Null,Eevee,Fire Stone,Flareon,Null,Null
+162,Porygon,Normal,Null,Porygon,Trade holding Upgrade,Porygon2,Trade holding Dubious Disc,Porygon-Z
+163,Omanyte,Rock,Water,Omanyte,Level 40,Omastar,Null,Null
+164,Omastar,Rock,Water,Omanyte,Level 40,Omastar,Null,Null
+165,Kabuto,Rock,Water,Kabuto,Level 40,Kabutops,Null,Null
+166,Kabutops,Rock,Water,Kabuto,Level 40,Kabutops,Null,Null
+167,Aerodactyl,Rock,Flying,Aerodactyl,Null,Null,Null,Null
+168,Snorlax,Normal,Null,Munchlax,Friendship,Snorlax,Null,Null
+169,Articuno,Ice,Flying,Articuno,Null,Null,Null,Null
+170,Zapdos,Electric,Flying,Zapdos,Null,Null,Null,Null
+171,Moltres,Fire,Flying,Moltres,Null,Null,Null,Null
+172,Dratini,Dragon,Null,Dratini,Level 30,Dragonair,Level 55,Dragonite
+173,Dragonair,Dragon,Null,Dratini,Level 30,Dragonair,Level 55,Dragonite
+174,Dragonite,Dragon,Flying,Dratini,Level 30,Dragonair,Level 55,Dragonite
+175,Mewtwo,Psychic,Null,Mewtwo,Null,Null,Null,Null
+176,Mew ,Psychic,Null,Mew ,Null,Null,Null,Null
+177,Chikorita,Grass,Null,Chikorita,Level 16,Bayleef,Level 32,Meganium
+178,Bayleef,Grass,Null,Chikorita,Level 16,Bayleef,Level 32,Meganium
+179,Meganium,Grass,Null,Chikorita,Level 16,Bayleef,Level 32,Meganium
+180,Cyndaquil,Fire,Null,Cyndaquil,Level 14,Quilava,Level 36,Typhlosion
+181,Quilava,Fire,Null,Cyndaquil,Level 14,Quilava,Level 36,Typhlosion
+182,Typhlosion,Fire,Null,Cyndaquil,Level 14,Quilava,Level 36,Typhlosion
+183,Totodile,Water,Null,Totodile,Level 18,Croconaw,Level 30,Feraligatr
+184,Croconaw,Water,Null,Totodile,Level 18,Croconaw,Level 30,Feraligatr
+185,Feraligatr,Water,Null,Totodile,Level 18,Croconaw,Level 30,Feraligatr
+186,Sentret,Normal,Null,Sentret,Level 15,Furret,Null,Null
+187,Furret,Normal,Null,Sentret,Level 15,Furret,Null,Null
+188,Hoothoot,Normal,Flying,Hoothoot,Level 20,Noctowl,Null,Null
+189,Noctowl,Normal,Flying,Hoothoot,Level 20,Noctowl,Null,Null
+190,Ledyba,Bug,Flying,Ledyba,Level 18,Lebian,Null,Null
+191,Lebian,Bug,Flying,Ledyba,Level 18,Lebian,Null,Null
+192,Spinarak,Bug,Poison,Spinarak,Level 22,Ariados,Null,Null
+193,Ariados,Bug,Poison,Spinarak,Level 22,Ariados,Null,Null
+194,Crobat,Poison,Flying,Zubat,Level 22,Golbat,Friendship,Crobat
+195,Chinchou,Water,Electric,Chinchou,Level 27,Lanturn,Null,Null
+196,Lanturn,Water,Electric,Chinchou,Level 27,Lanturn,Null,Null
+197,Pichu,Electric,Null,Pichu,Friendship,Pikachu,Thunderstone,Raichu
+198,Cleffa,Fairy,Null,Cleffa,Friendship,Clefairy,Moon Stone,Clefable
+199,Igglybuff,Normal,Fairy,Igglybuff,Friendship,Jigglypuff,Moon Stone,Wigglytuff
+200,Togepi,Fairy,Null,Togepi,Friendship,Togetic,Shiny Stone,Togekiss
+201,Togetic,Fairy,Flying,Togepi,Friendship,Togetic,Shiny Stone,Togekiss
+202,Natu,Psychic,Flying,Natu,Level 25,Xatu,Null,Null
+203,Xatu,Psychic,Flying,Natu,Level 25,Xatu,Null,Null
+204,Mareep,Electric,Null,Mareep,Level 15,Flaafy,Level 30,Ampharos
+205,Flaaffy,Electric,Null,Mareep,Level 15,Flaafy,Level 30,Ampharos
+206,Ampharos,Electric,Null,Mareep,Level 15,Flaafy,Level 30,Ampharos
+207,Bellossom,Grass,Null,Oddish,Level 21,Gloom,Sun Stone,Bellossom
+208,Marill,Water,Fairy,Azurill ,Friendship,Marill,Level 18,Azumarill
+209,Azumarill,Water,Fairy,Azurill ,Friendship,Marill,Level 18,Azumarill
+210,Sudowoodo,Rock,Null,Bonsly,Level up knowing Mimic,Sudowoodo,Null,Null
+211,Politoed,Water,Null,Poliwag,Level 25,Poliwhirl,Trade holding King's Rock,Politoed
+212,Hoppip,Grass,Flying,Hoppip,Level 18,Skiploom,Level 27,Jumpluff
+213,Skiploom,Grass,Flying,Hoppip,Level 18,Skiploom,Level 27,Jumpluff
+214,Jumpluff,Grass,Flying,Hoppip,Level 18,Skiploom,Level 27,Jumpluff
+215,Aipom,Normal,Null,Aipom,Level up knowing Double Hit,Ambipom,Null,Null
+216,Sunkern,Grass,Null,Sunkern,Sun Stone,Sunflora,Null,Null
+217,Sunflora,Grass,Null,Sunkern,Sun Stone,Sunflora,Null,Null
+218,Yanma,Bug,Flying,Yanma,Level up knowing Ancient Power,Yanmega,Null,Null
+219,Wooper,Water,Ground,Wooper,Level 20,Quagsire,Null,Null
+220,Quagsire,Water,Ground,Wooper,Level 20,Quagsire,Null,Null
+221,Espeon,Psychic,Null,Eevee,Friendship Day,Espeon,Null,Null
+222,Umbreon,Dark,Null,Eevee,Friendship Night,Umbreon,Null,Null
+223,Murkrow,Dark,Flying,Murkrow,Dusk Stone,Honchkrow,Null,Null
+224,Slowking,Water,Psychic,Slowpoke,Trade Holding King's Rock,Slowking,Null,Null
+225,Misdreavus,Ghost,Null,Misdreavus,Dusk Stone,Mismagius,Null,Null
+226,Unown,Psychic,Null,Unown,Null,Null,Null,Null
+227,Wobbuffet,Psychic,Null,Wynaut,Level 15,Wobbuffet,Null,Null
+228,Girafarig,Normal,Psychic,Girafarig,Null,Null,Null,Null
+229,Pineco,Bug,Null,Pineco,Level 31,Forretress,Null,Null
+230,Forretress,Bug,Steel,Pineco,Level 31,Forretress,Null,Null
+231,Dunsparce,Normal,Null,Dunsparce,Null,Null,Null,Null
+232,Gligar,Ground,Flying,Gligar,Level up holding Razor Fang at night,Gliscor,Null,Null
+233,Steelix,Steel,Ground,Onix,Trade with Metal Coat,Steelix,Null,Null
+234,Snubbull,Fairy,Null,Snubbull,Level 23,Granbull,Null,Null
+235,Granbull,Fairy,Null,Snubbull,Level 23,Granbull,Null,Null
+236,Qwilfish,Water,Poison,Qwilfish,Null,Null,Null,Null
+237,Scizor,Bug,Steel,Scyther,Trade holding Metal Coat,Scizor,Null,Null
+238,Shuckle,Bug,Rock,Shuckle,Null,Null,Null,Null
+239,Heracross,Bug,Fighting,Heracross,Null,Null,Null,Null
+240,Sneasel,Dark,Ice,Sneasel,Level up holding Razor Claw at night,Weavile,Null,Null
+241,Teddiursa,Normal,Null,Teddiursa,Level 30,Ursaring,Null,Null
+242,Ursaring,Normal,Null,Teddiursa,Level 30,Ursaring,Null,Null
+243,Slugma,Fire,Null,Slugma,Level 38,Magcargo,Null,Null
+244,Magcargo,Fire,Rock,Slugma,Level 38,Magcargo,Null,Null
+245,Swinub,Ice,Ground,Swinub,Level 33,Piloswine,Level up knowing Ancient power,Mamoswine
+246,Piloswine,Ice,Ground,Swinub,Level 33,Piloswine,Level up knowing Ancient power,Mamoswine
+247,Corsola,Water,Rock,Corsola,Null,Null,Null,Null
+248,Corsola (galar form),Ghost,Null,Corsola (galar form),Level 38,Cursola,Null,Null
+249,Remoraid,Water,Null,Remoraid,Level 25,Octillery,Null,Null
+250,Octillery,Water,Null,Remoraid,Level 25,Octillery,Null,Null
+251,Delibird,Ice,Flying,Delibird,Null,Null,Null,Null
+252,Mantine,Water,Flying,Mantyke,Levelup with Remoraid in party,Mantine,Null,Null
+253,Skarmory,Steel,Flying,Skarmory,Null,Null,Null,Null
+254,Houndour,Dark,Fire,Houndour,Level 24,Houndoom,Null,Null
+255,Houndoom,Dark,Fire,Houndour,Level 24,Houndoom,Null,Null
+256,Kingdra,Water,Dragon,Horsea,Level 32,Seadra,Trade holding Dragon Scale,Kingdra
+257,Phanpy,Ground,Null,Phanpy,Level 25,Donphan,Null,Null
+258,Donphan,Ground,Null,Phanpy,Level 25,Donphan,Null,Null
+259,Porygon2,Normal,Null,Porygon,Trade holding Upgrade,Porygon2,Trade holding Dubious Disc,Porygon-Z
+260,Stantler,Normal,Null,Stantler,Null,Null,Null,Null
+261,Smeargle,Normal,Null,Smeargle,Null,Null,Null,Null
+262,Tyrogue,Fighting,Null,Tyrogue,Level 20 various based on Attack and Defense stats,Null,Null,Null
+263,Hitmontop,Fighting,Null,Tyrogue,Level 20 and Attack = Defense,Hitmontop,Null,Null
+264,Smoochum,Ice,Psychic,Smoochum,Level 30,Jynx,Null,Null
+265,Elekid,Electric,Null,Elekid,Level 30,Electabuzz,Trade holding Electirizer,Electivire
+266,Magby,Fire,Null,Magby,Level 30,Magmar,Trade holding Magmarizer,Magmortar
+267,Miltank,Normal,Null,Miltank,Null,Null,Null,Null
+268,Blissey,Normal,Null,Happiny,Level up holding Oval Stone in the Daytime,Chansey,Friendship,Blissey
+269,Raikou,Electric,Null,Raikou,Null,Null,Null,Null
+270,Entei,Fire,Null,Entei,Null,Null,Null,Null
+271,Suicune,Water,Null,Suicune,Null,Null,Null,Null
+272,Larvitar,Rock,Ground,Larvitar,Level 30,Pupitar,Level 55,Tyranitar
+273,Pupitar,Rock,Ground,Larvitar,Level 30,Pupitar,Level 55,Tyranitar
+274,Tyranitar,Rock,Dark,Larvitar,Level 30,Pupitar,Level 55,Tyranitar
+275,Lugia,Psychic,Flying,Lugia,Null,Null,Null,Null
+276,Ho-Oh,Fire,Flying,Ho-Oh,Null,Null,Null,Null
+277,Celebi,Psychic,Grass,Celebi,Null,Null,Null,Null
+278,Treecko,Grass,Null,Treecko,Level 16,Grovyle,Level 36,Sceptile
+279,Grovyle,Grass,Null,Treecko,Level 16,Grovyle,Level 36,Sceptile
+280,Sceptile,Grass,Null,Treecko,Level 16,Grovyle,Level 36,Sceptile
+281,Torchic,Fire,Null,Torchic,Level 16,Combusken,Level 36,Blazilen
+282,Combusken,Fire,Fighting,Torchic,Level 16,Combusken,Level 36,Blazilen
+283,Blazilen,Fire,Fighting,Torchic,Level 16,Combusken,Level 36,Blazilen
+284,Mudkip,Water,Null,Mudkip,Level 16,Marshtomp,Level 36,Swampert
+285,Marshtomp,Water,Ground,Mudkip,Level 16,Marshtomp,Level 36,Swampert
+286,Swampert,Water,Ground,Mudkip,Level 16,Marshtomp,Level 36,Swampert
+287,Poochyena,Dark,Null,Poochyena,Level 18,Mightyena,Null,Null
+288,Mightyena,Dark,Null,Poochyena,Level 18,Mightyena,Null,Null
+289,Zigzagoon,Normal,Null,Zigzagoon,Level 20,Linoone,Null,Null
+290,Zigzagoon (galar form),Dark,Normal,Zigzagoon (galar form),Level 20,Linoone (galar form),Level 35 at night,Obstagoon
+291,Linoone,Normal,Null,Zigzagoon,Level 20,Linoone,Null,Null
+292,Linoone (galar form),Dark,Normal,Zigzagoon (galar form),Level 20,Linoone (galar form),Level 35 at night,Obstagoon
+293,Wurmple,Bug,Null,Wurmple,Level 7,Silcoon,Level 10,Beautifly
+294,Silcoon,Bug,Null,Wurmple,Level 7,Silcoon,Level 10,Beautifly
+295,Beautifly,Bug,Flying,Wurmple,Level 7,Silcoon,Level 10,Beautifly
+296,Cascoon,Bug,Null,Wurmple,Level 7,Cascoon,Level 10,Dustox
+297,Dustox,Bug,Poison,Wurmple,Level 7,Cascoon,Level 10,Dustox
+298,Lotad,Water,Grass,Lotad,Level 14,Lombre,Water Stone,Ludicolo
+299,Lombre,Water,Grass,Lotad,Level 14,Lombre,Water Stone,Ludicolo
+300,Ludicolo,Water,Grass,Lotad,Level 14,Lombre,Water Stone,Ludicolo
+301,Seedot,Grass,Null,Seedot,Level 14,Nuzleaf,Leaf Stone,Shiftry
+302,Nuzleaf,Grass,Dark,Seedot,Level 14,Nuzleaf,Leaf Stone,Shiftry
+303,Shiftry,Grass,Dark,Seedot,Level 14,Nuzleaf,Leaf Stone,Shiftry
+304,Tailow,Normal,Flying,Tailow,Level 22,Swellow,Null,Null
+305,Swellow,Normal,Flying,Tailow,Level 22,Swellow,Null,Null
+306,Wingull,Water,Flying,Wingull,Level 25,Pelipper,Null,Null
+307,Pelipper,Water,Flying,Wingull,Level 25,Pelipper,Null,Null
+308,Ralts,Psychic,Fairy,Ralts,Level 20,Kirlia,Level 30,Gardevoir
+309,Kirlia,Psychic,Fairy,Ralts,Level 20,Kirlia,Dawn Stone and Male,Gallade
+310,Gardevoir,Psychic,Fairy,Ralts,Level 20,Kirlia,Level 30,Gardevoir
+311,Surskit,Bug,Water,Surskit,Level 22,Masquerain,Null,Null
+312,Masquerain,Bug,Flying,Surskit,Level 22,Masquerain,Null,Null
+313,Shroomish,Grass,Null,Shroomish,Level 23,Breloom,Null,Null
+314,Breloom,Grass,Fighting,Shroomish,Level 23,Breloom,Null,Null
+315,Slakoth,Normal,Null,Slakoth,Level 18,Vigoroth,Level 36,Slaking
+316,Vigoroth,Normal,Null,Slakoth,Level 18,Vigoroth,Level 36,Slaking
+317,Slaking,Normal,Null,Slakoth,Level 18,Vigoroth,Level 36,Slaking
+318,Nincada,Bug,Ground,Nincada,Level 20,Ninjask,Extra space in party,Shedinja
+319,Ninjask,Bug,Flying,Nincada,Level 20,Ninjask,Extra space in party,Shedinja
+320,Shedinja,Bug,Ghost,Nincada,Level 20,Ninjask,Extra space in party,Shedinja
+321,Whismur,Normal,Null,Whismur,Level 20,Loudred,Level 40,Exploud
+322,Loudred,Normal,Null,Whismur,Level 20,Loudred,Level 40,Exploud
+323,Exploud,Normal,Null,Whismur,Level 20,Loudred,Level 40,Exploud
+324,Makuhita,Fighting,Null,Makuhita,Level 24,Hariyama,Null,Null
+325,Hariyama,Fighting,Null,Makuhita,Level 24,Hariyama,Null,Null
+326,Azurill,Normal,Fairy,Azurill ,Friendship,Marill,Level 18,Azumarill
+327,Nosepass,Rock,Null,Nosepass,Level up in area with magnetic field,Probopass,Null,Null
+328,Skitty,Normal,Null,Skitty,Moonstone,Delcatty,Null,Null
+329,Delcatty,Normal,Null,Skitty,Moonstone,Delcatty,Null,Null
+330,Sableye,Dark,Ghost,Sableye,Null,Null,Null,Null
+331,Mawile,Steel,Fairy,Mawile,Null,Null,Null,Null
+332,Aron,Steel,Rock,Aron,Level 32,Lairon,Level 42,Aggron
+333,Lairon,Steel,Rock,Aron,Level 32,Lairon,Level 42,Aggron
+334,Aggron,Steel,Rock,Aron,Level 32,Lairon,Level 42,Aggron
+335,Meditite,Fighting,Psychic,Meditite,Level 37,Medicham,Null,Null
+336,Medicham,Fighting,Psychic,Meditite,Level 37,Medicham,Null,Null
+337,Electrike,Electric,Null,Electrike,Level 26,Manectric,Null,Null
+338,Manectric,Electric,Null,Electrike,Level 26,Manectric,Null,Null
+339,Plusle,Electric,Null,Plusle,Null,Null,Null,Null
+340,Minun,Electric,Null,Minun,Null,Null,Null,Null
+341,Volbeat,Bug,Null,Volbeat,Null,Null,Null,Null
+342,Illumise,Bug,Null,Illumise,Null,Null,Null,Null
+343,Roselia,Grass,Poison,Budew,Friendship,Roselia,Shiny Stone,Roserade
+344,Gulpin,Poison,Null,Gulpin,Level 26,Swalot,Null,Null
+345,Swalot,Poison,Null,Gulpin,Level 26,Swalot,Null,Null
+346,Carvanha,Water,Dark,Carvanha,Level 30,Sharpedo,Null,Null
+347,Sharpedo,Water,Dark,Carvanha,Level 30,Sharpedo,Null,Null
+348,Wailmer,Water,Null,Wailmer,Level 40,Wailord,Null,Null
+349,Wailord,Water,Null,Wailmer,Level 40,Wailord,Null,Null
+350,Numel,Fire,Ground,Numel,Level 33,Camreupt,Null,Null
+351,Camreupt,Fire,Ground,Numel,Level 33,Camreupt,Null,Null
+352,Torkoal,Fire,Null,Torkoal,Null,Null,Null,Null
+353,Spoink,Psychic,Null,Spoink,Level 32,Grumpig,Null,Null
+354,Grumpig,Psychic,Null,Spoink,Level 32,Grumpig,Null,Null
+355,Spinda,Normal,Null,Spinda,Null,Null,Null,Null
+356,Trapinch,Ground,Null,Trapinch,Level 35,Vibrava,Level 45,Flygon
+357,Vibrava,Ground,Dragon,Trapinch,Level 35,Vibrava,Level 45,Flygon
+358,Flygon,Ground,Dragon,Trapinch,Level 35,Vibrava,Level 45,Flygon
+359,Cacnea,Grass,Null,Cacnea,Level 32,Cacturne,Null,Null
+360,Cacturne,Grass,Dark,Cacnea,Level 32,Cacturne,Null,Null
+361,Swablu,Normal,Flying,Swablu,Level 35,Altaria,Null,Null
+362,Altaria,Dragon,Flying,Swablu,Level 35,Altaria,Null,Null
+363,Zangoose,Normal,Null,Zangoose,Null,Null,Null,Null
+364,Seviper,Poison,Null,Seviper,Null,Null,Null,Null
+365,Lunatone,Rock,Psychic,Lunatone,Null,Null,Null,Null
+366,Solrock,Rock,Psychic,Solrock,Null,Null,Null,Null
+367,Barboach,Water,Ground,Barboach,Level 30,Whiscash,Null,Null
+368,Whiscash,Water,Ground,Barboach,Level 30,Whiscash,Null,Null
+369,Corphish,Water,Null,Corphish,Level 30,Crawdaunt,Null,Null
+370,Crawdaunt,Water,Dark,Corphish,Level 30,Crawdaunt,Null,Null
+371,Baltoy,Ground,Psychic,Baltoy,Level 36,Claydol,Null,Null
+372,Claydol,Ground,Psychic,Baltoy,Level 36,Claydol,Null,Null
+373,Lileep,Rock,Grass,Lileep,Level 40,Cradily,Null,Null
+374,Cradily,Rock,Grass,Lileep,Level 40,Cradily,Null,Null
+375,Anorith,Rock,Bug,Anorith,Level 40,Armaldo,Null,Null
+376,Armaldo,Rock,Bug,Anorith,Level 40,Armaldo,Null,Null
+377,Feebas,Water,Null,Feebas,Trade holding prism scale,Milotic,Null,Null
+378,Milotic,Water,Null,Feebas,Trade holding prism scale,Milotic,Null,Null
+379,Castform,Normal,Null,Castform,Null,Null,Null,Null
+380,Castform (sunny),Fire,Null,Castform (sunny),Null,Null,Null,Null
+381,Castform (rainy),Water,Null,Castform (rainy),Null,Null,Null,Null
+382,Castform (snowy),Ice,Null,Castform (snowy),Null,Null,Null,Null
+383,Kecleon,Normal,Null,Kecleon,Null,Null,Null,Null
+384,Shuppet,Ghost,Null,Shuppet,Level 37,Banette,Null,Null
+385,Banette,Ghost,Null,Shuppet,Level 37,Banette,Null,Null
+386,Duskull,Ghost,Null,Duskull,Level 37,Dusclops,Trade holding Reaper Cloth,Dusknoir
+387,Dusclops,Ghost,Null,Duskull,Level 37,Dusclops,Trade holding Reaper Cloth,Dusknoir
+388,Tropius,Grass,Flying,Tropius,Null,Null,Null,Null
+389,Chimecho,Psychic,Null,Chingling,Friendship at night,Chimecho,Null,Null
+390,Absol,Dark,Null,Absol,Null,Null,Null,Null
+391,Wynaut,Psychic,Null,Wynaut,Level 15,Wobbuffet,Null,Null
+392,Snorunt,Ice,Null,Snorunt,Level 42,Glalie,Dawnstone (female from snorunt),Froslass
+393,Glalie,Ice,Null,Snorunt,Level 42,Glalie,Null,Null
+394,Spheal,Ice,Water,Spheal,Level 32,Sealeo,Level 44,Walrein
+395,Sealeo,Ice,Water,Spheal,Level 32,Sealeo,Level 44,Walrein
+396,Walrein,Ice,Water,Spheal,Level 32,Sealeo,Level 44,Walrein
+397,Clamperl,Water,Null,Clamperl,Trade holding Deep Sea Tooth,Huntail,OR Trade holding Deep Sea Scale,Gorebyss
+398,Huntail,Water,Null,Clamperl,Trade holding Deep Sea Tooth,Huntail,Null,Null
+399,Gorebyss,Water,Null,Clamperl,Trade holding Deep Sea Scale,Gorebyss,Null,Null
+400,Relicanth,Water,Rock,Relicanth,Null,Null,Null,Null
+401,Luvdisc,Water,Null,Luvdisc,Null,Null,Null,Null
+402,Bagon,Dragon,Null,Bagon,Level 30,Shelgon,Level 50,Salamence
+403,Shelgon,Dragon,Null,Bagon,Level 30,Shelgon,Level 50,Salamence
+404,Salamence,Dragon,Flying,Bagon,Level 30,Shelgon,Level 50,Salamence
+405,Beldum,Steel,Psychic,Beldum,Level 20,Metang,Level 45,Metagross
+406,Metang,Steel,Psychic,Beldum,Level 20,Metang,Level 45,Metagross
+407,Metagross,Steel,Psychic,Beldum,Level 20,Metang,Level 45,Metagross
+408,Regirock,Rock,Null,Regirock,Null,Null,Null,Null
+409,Regice,Ice,Null,Regice,Null,Null,Null,Null
+410,Registeel,Steel,Null,Registeel,Null,Null,Null,Null
+411,Latias,Dragon,Psychic,Latias,Null,Null,Null,Null
+412,Latios,Dragon,Psychic,Latios,Null,Null,Null,Null
+413,Kyogre,Water,Ground,Kyogre,Null,Null,Null,Null
+414,Groudon,Ground,Null,Groudon,Null,Null,Null,Null
+415,Raquaza,Dragon,Flying,Raquaza,Null,Null,Null,Null
+416,Jirachi,Steel,Psychic,Jirachi,Null,Null,Null,Null
+417,Deoxys,Psychic,Null,Deoxys,Null,Null,Null,Null
+418,Turtwig,Grass,Null,Turtwig,Level 18,Grotle,Level 32,Torterra
+419,Grotle,Grass,Null,Turtwig,Level 18,Grotle,Level 32,Torterra
+420,Torterra,Grass,Ground,Turtwig,Level 18,Grotle,Level 32,Torterra
+421,Chimchar,Fire,Null,Chimchar,Level 14,Monferno,Level 36,Infernape
+422,Monferno,Fire,Fighting,Chimchar,Level 14,Monferno,Level 36,Infernape
+423,Infernape,Fire,Fighting,Chimchar,Level 14,Monferno,Level 36,Infernape
+424,Piplup,Water,Null,Piplup,Level 16,Prinplup,Level 36,Empoleon
+425,Prinplup,Water,Null,Piplup,Level 16,Prinplup,Level 36,Empoleon
+426,Empoleon,Water,Steel,Piplup,Level 16,Prinplup,Level 36,Empoleon
+427,Starly,Normal,Flying,Starly,Level 14,Staravia,Level 34,Staraptor
+428,Staravia,Normal,Flying,Starly,Level 14,Staravia,Level 34,Staraptor
+429,Staraptor,Normal,Flying,Starly,Level 14,Staravia,Level 34,Staraptor
+430,Bidoof,Normal,Null,Bidoof,Level 15,Bibarel,Null,Null
+431,Bibarel,Normal,Water,Bidoof,Level 15,Bibarel,Null,Null
+432,Kriketot,Bug,Null,Kriketot,Level 10,Kricketune,Null,Null
+433,Kricketune,Bug,Null,Kriketot,Level 10,Kricketune,Null,Null
+434,Shinx,Electric,Null,Shinx,Level 15,Luxio,Level 30,Luxray
+435,Luxio,Electric,Null,Shinx,Level 15,Luxio,Level 30,Luxray
+436,Luxray,Electric,Null,Shinx,Level 15,Luxio,Level 30,Luxray
+437,Budew,Grass,Poison,Budew,Friendship,Roselia,Shiny Stone,Roserade
+438,Roserade,Grass,Poison,Budew,Friendship,Roselia,Shiny Stone,Roserade
+439,Cranidos,Rock,Null,Cranidos,Level 30,Rampardos,Null,Null
+440,Rampardos,Rock,Null,Cranidos,Level 30,Rampardos,Null,Null
+441,Shieldon,Rock,Steel,Shieldon,Level 30,Bastiodon,Null,Null
+442,Bastiodon,Rock,Steel,Shieldon,Level 30,Bastiodon,Null,Null
+443,Burmy (plant cloak),Bug,Null,Burmy (plant cloak),Level 20 (female),Wormadam (plant cloak),OR Level 20 (male),Mothim
+444,Burmy (sandy cloak),Bug,Null,Burmy (sandy cloak),Level 20 (female),Wormadam (sandy cloak),OR Level 20 (male),Mothim
+445,Burmy (trash cloak),Bug,Null,Burmy (trash cloak),Level 20 (female),Wormadam (trash cloak),OR Level 20 (male),Mothim
+446,Wormadam (plant cloak),Bug,Grass,Burmy (plant cloak),Level 20 (female),Wormadam (plant cloak),Null,Null
+447,Wormadam (sandy cloak),Bug,Ground,Burmy (sandy cloak),Level 20 (female),Wormadam (sandy cloak),Null,Null
+448,Wormadam (trash cloak),Bug,Steel,Burmy (trash cloak),Level 20 (female),Wormadam (trash cloak),Null,Null
+449,Mothim,Bug,Flying,Burmy (plant cloak),Level 20 (male),Mothim,Null,Null
+450,Combee,Bug,Flying,Combee,Level 21 (female),Vespiqueen,Null,Null
+451,Vespiqueen,Bug,Flying,Combee,Level 21 (female),Vespiqueen,Null,Null
+452,Pachirisu,Electric,Null,Pachirisu,Null,Null,Null,Null
+453,Buizel,Water,Null,Buizel,Level 26,Floatzel,Null,Null
+454,Floatzel,Water,Null,Buizel,Level 26,Floatzel,Null,Null
+455,Cherubi,Grass,Null,Cherubi,Level 25,Cherrim,Null,Null
+456,Cherrim,Grass,Null,Cherubi,Level 25,Cherrim,Null,Null
+457,Shellos (pink),Water,Null,Shellos (pink),Level 30,Gastrodon (pink),Null,Null
+458,Shellos (blue),Water,Null,Shellos (blue),Level 30,Gastrodon (blue),Null,Null
+459,Gastrodon (pink),Water,Ground,Shellos (pink),Level 30,Gastrodon (pink),Null,Null
+460,Gastrodon (blue),Water,Ground,Shellos (blue),Level 30,Gastrodon (blue),Null,Null
+461,Ambipom,Normal,Null,Aipom,Level up knowing Double Hit,Ambipom,Null,Null
+462,Driftloon,Ghost,Flying,Driftloon,Level 28,Drifblim,Null,Null
+463,Drifblim,Ghost,Flying,Driftloon,Level 28,Drifblim,Null,Null
+464,Buneary,Normal,Null,Buneary,Friendship,Lopunny,Null,Null
+465,Lopunny,Normal,Null,Buneary,Friendship,Lopunny,Null,Null
+466,Mismagius,Ghost,Null,Misdreavus,Dusk Stone,Mismagius,Null,Null
+467,Honchkrow,Dark,Flying,Murkrow,Dusk Stone,Honchkrow,Null,Null
+468,Glameow,Normal,Null,Glameow,Level 38,Purugly,Null,Null
+469,Purugly,Normal,Null,Glameow,Level 38,Purugly,Null,Null
+470,Chingling,Psychic,Null,Chingling,Friendship at night,Chimecho,Null,Null
+471,Stunky,Poison,Dark,Stunky,Level 34,Skuntank,Null,Null
+472,Skuntank,Poison,Dark,Stunky,Level 34,Skuntank,Null,Null
+473,Bronzor,Steel,Psychic,Bronzor,Level 33,Bronzong,Null,Null
+474,Bronzong,Steel,Psychic,Bronzor,Level 33,Bronzong,Null,Null
+475,Bonsly,Rock,Null,Bonsly,Level up knowing Mimic,Sudowoodo,Null,Null
+476,Mime Jr.,Psychic,Fairy,Mime Jr.,Level up knowing Mimic,Mr. Mime (galar form),Level 42,Mr. Rime
+477,Happiny,Normal,Null,Happiny,Level up holding Oval Stone in the Daytime,Chansey,Friendship,Blissey
+478,Chatot,Normal,Flying,Chatot,Null,Null,Null,Null
+479,Spiritomb,Ghost,Dark,Spiritomb,Null,Null,Null,Null
+480,Gible,Dragon,Ground,Gible,Level 24,Gabite,Level 48,Garchomp
+481,Gabite,Dragon,Ground,Gible,Level 24,Gabite,Level 48,Garchomp
+482,Garchomp,Dragon,Ground,Gible,Level 24,Gabite,Level 48,Garchomp
+483,Munchlax,Normal,Null,Munchlax,Friendship,Snorlax,Null,Null
+484,Riolu,Fighting,Null,Riolu,Friendship at day,Lucario,Null,Null
+485,Lucario,Fighting,Steel,Riolu,Friendship at day,Lucario,Null,Null
+486,Hippopotas,Ground,Null,Hippopotas,Level 34,Hippowdon,Null,Null
+487,Hippowdon,Ground,Null,Hippopotas,Level 34,Hippowdon,Null,Null
+488,Skorupi,Poison,Bug,Skorupi,Level 40,Drapion,Null,Null
+489,Drapion,Poison,Dark,Skorupi,Level 40,Drapion,Null,Null
+490,Croagunk,Poison,Fighting,Croagunk,Level 37,Toxicroak,Null,Null
+491,Toxicroak,Poison,Fighting,Croagunk,Level 37,Toxicroak,Null,Null
+492,Carnivine,Grass,Null,Carnivine,Null,Null,Null,Null
+493,Finneon,Water,Null,Finneon,Level 31,Lumineon,Null,Null
+494,Lumineon,Water,Null,Finneon,Level 31,Lumineon,Null,Null
+495,Mantyke,Water,Flying,Mantyke,Levelup with Remoraid in party,Mantine,Null,Null
+496,Snover,Grass,Ice,Snover,Level 40,Abomasnow,Null,Null
+497,Abomasnow,Grass,Ice,Snover,Level 40,Abomasnow,Null,Null
+498,Weavile,Dark,Ice,Sneasel,Level up holding Razor Claw at night,Weavile,Null,Null
+499,Magnezone,Electric,Steel,Magnemite,Level 30,Magneton,Level up in area with magnetic field,Magnezone
+500,Lickilicky,Normal,Null,Lickitung,Level up knowing Rollout,Lickilicky,Null,Null
+501,Rhyperior,Ground,Rock,Rhyhorn,Level 42,Rhydon,Trade holding Protector,Rhyperior
+502,Tangrowth,Grass,Null,Tangela,Level up knowing Ancient Power,Tangrowth,Null,Null
+503,Electivire,Electric,Null,Elekid,Level 30,Electabuzz,Trade holding Electirizer,Electivire
+504,Magmortar,Fire,Null,Magby,Level 30,Magmar,Trade holding Magmarizer,Magmortar
+505,Togekiss,Fairy,Flying,Togepi,Friendship,Togetic,Shiny Stone,Togekiss
+506,Yanmega,Bug,Flying,Yanma,Level up knowing Ancient Power,Yanmega,Null,Null
+507,Leafeon,Grass,Null,Eevee,Grass Stone,Leafeon,Null,Null
+508,Glaceon,Ice,Null,Eevee,Ice Stone,Glaceon,Null,Null
+509,Gliscor,Ground,Flying,Gligar,Level up holding Razor Fang at night,Gliscor,Null,Null
+510,Mamoswine,Ice,Ground,Swinub,Level 33,Piloswine,Level up knowing Ancient power,Mamoswine
+511,Porygon-Z,Normal,Null,Porygon,Trade holding Upgrade,Porygon2,Trade holding Dubious Disc,Porygon-Z
+512,Gallade,Psychic,Fighting,Ralts,Level 20,Kirlia,Dawn Stone and Male,Gallade
+513,Probopass,Rock,Steel,Nosepass,Level up in area with magnetic field,Probopass,Null,Null
+514,Dusknoir,Ghost,Null,Duskull,Level 37,Dusclops,Trade holding Reaper Cloth,Dusknoir
+515,Froslass,Ice,Ghost,Snorunt,Dawn Stone and Femaile,Froslass,Null,Null
+516,Rotom,Electric,Ghost,Rotom,Null,Null,Null,Null
+517,Rotom Heat,Electric,Fire,Rotom,Microwave,Rotom Heat,Null,Null
+518,Rotom Wash,Electric,Water,Rotom,Washing Machine,Rotom Wash,Null,Null
+519,Rotom Frost,Electric,Ice,Rotom,Refrigerator,Rotom Frost,Null,Null
+520,Rotom Fan,Electric,Flying,Rotom,Electric Fan,Rotom Fan,Null,Null
+521,Rotom Mow,Electric,Grass,Rotom,Lawnmower,Rotom Mow,Null,Null
+522,Uxie,Psychic,Null,Uxie,Null,Null,Null,Null
+523,Mespirit,Psychic,Null,Mespirit,Null,Null,Null,Null
+524,Azelf,Psychic,Null,Azelf,Null,Null,Null,Null
+525,Dialga,Steel,Dragon,Dialga,Null,Null,Null,Null
+526,Palkia,Water,Dragon,Palkia,Null,Null,Null,Null
+527,Heatran,Fire,Steel,Heatran,Null,Null,Null,Null
+528,Regigigas,Normal,Null,Regigigas,Null,Null,Null,Null
+529,Giratina,Ghost,Dragon,Giratina,Null,Null,Null,Null
+530,Cresselia,Psychic,Null,Cresselia,Null,Null,Null,Null
+531,Phione,Water,Null,Manaphy,Breed With Ditto,Phione,Null,Null
+532,Manaphy,Water,Null,Manaphy,Breed With Ditto,Phione,Null,Null
+533,Darkrai,Dark,Null,Darkrai,Null,Null,Null,Null
+534,Shaymin Land Form,Grass,Null,Shaymin Land Form,Null,Null,Null,Null
+535,Shaymin Sky Form,Grass,Flying,Shaymin Sky Form,Null,Null,Null,Null
+536,Arceus,Normal,Null,Arceus,Null,Null,Null,Null
+537,Victini,Psychic,Fire,Victini,Null,Null,Null,Null
+538,Snivy,Grass,Null,Snivy,Level 16,Servine,Level 36,Serperior
+539,Servine,Grass,Null,Snivy,Level 16,Servine,Level 36,Serperior
+540,Serperior,Grass,Null,Snivy,Level 16,Servine,Level 36,Serperior
+541,Tepig,Fire,Fighting,Tepig,Level 17,Pignite,Level 36,Emboar
+542,Pignite,Fire,Fighting,Tepig,Level 17,Pignite,Level 36,Emboar
+543,Emboar,Fire,Fighting,Tepig,Level 17,Pignite,Level 36,Emboar
+544,Oshawott,Water,Null,Oshawott,Level 17,Dewott,Level 36,Samurott
+545,Dewott,Water,Null,Oshawott,Level 17,Dewott,Level 36,Samurott
+546,Samurott,Water,Null,Oshawott,Level 17,Dewott,Level 36,Samurott
+547,Patrat,Normal,Null,Patrat,Level 20,Watchog,Null,Null
+548,Watchog,Normal,Null,Patrat,Level 20,Watchog,Null,Null
+549,Lillipup,Normal,Null,Lillipup,Level 16,Herdier,Level 32,Stoutland
+550,Herdier,Normal,Null,Lillipup,Level 16,Herdier,Level 32,Stoutland
+551,Stoutland,Normal,Null,Lillipup,Level 16,Herdier,Level 32,Stoutland
+552,Purrloin,Dark,Null,Purrloin,Level 20,Liepard,Null,Null
+553,Liepard,Dark,Null,Purrloin,Level 20,Liepard,Null,Null
+554,Pansage,Grass,Null,Pansage,Leaf Stone,Simisage,Null,Null
+555,Simisage,Grass,Null,Pansage,Leaf Stone,Simisage,Null,Null
+556,Pansear,Fire,Null,Pansear,Fire Stone,Simisear,Null,Null
+557,Simisear,Fire,Null,Pansear,Fire Stone,Simisear,Null,Null
+558,Panpour,Water,Null,Panpour,Water Stone,Simipour,Null,Null
+559,Simipour,Water,Null,Panpour,Water Stone,Simipour,Null,Null
+560,Munna,Psychic,Null,Munna,Moon Stone,Musharna,Null,Null
+561,Musharna,Psychic,Null,Munna,Moon Stone,Musharna,Null,Null
+562,Pidove,Normal,Flying,Pidove,Level 21,Tranquill,Level 32,Unfezant
+563,Tranquill,Normal,Flying,Pidove,Level 21,Tranquill,Level 32,Unfezant
+564,Unfezant,Normal,Flying,Pidove,Level 21,Tranquill,Level 32,Unfezant
+565,Blitzle,Electric,Null,Blitzle,Level 27,Zebstrika,Null,Null
+566,Zebstrika,Electric,Null,Blitzle,Level 27,Zebstrika,Null,Null
+567,Roggenrola,Rock,Null,Roggenrola,Level 25,Boldore,Trade,Gigalith
+568,Boldore,Rock,Null,Roggenrola,Level 25,Boldore,Trade,Gigalith
+569,Gigalith,Rock,Null,Roggenrola,Level 25,Boldore,Trade,Gigalith
+570,Woobat,Psychic,Flying,Woobat,Friendship,Swoobat,Null,Null
+571,Swoobat,Psychic,Flying,Woobat,Friendship,Swoobat,Null,Null
+572,Drilbur,Ground,Null,Drilbur,Level 31,Excadrill,Null,Null
+573,Excadrill,Ground,Steel,Drilbur,Level 31,Excadrill,Null,Null
+574,Audino,Normal,Null,Audino,Null,Null,Null,Null
+575,Timburr,Fighting,Null,Timburr,Level 25,Gurdurr,Trade,Conkeldurr
+576,Gurdurr,Fighting,Null,Timburr,Level 25,Gurdurr,Trade,Conkeldurr
+577,Conkeldurr,Fighting,Null,Timburr,Level 25,Gurdurr,Trade,Conkeldurr
+578,Tympole,Water,Null,Tympole,Level 26,Palpitoad,Level 36,Seismitoad
+579,Palpitoad,Water,Ground,Tympole,Level 26,Palpitoad,Level 36,Seismitoad
+580,Seismitoad,Water,Ground,Tympole,Level 26,Palpitoad,Level 36,Seismitoad
+581,Throh,Fighting,Null,Throh,Null,Null,Null,Null
+582,Sawk,Fighting,Null,Sawk,Null,Null,Null,Null
+583,Sewaddle,Bug,Grass,Sewaddle,Level 20,Swadloon,Friendship,Leavanny
+584,Swadloon,Bug,Grass,Sewaddle,Level 20,Swadloon,Friendship,Leavanny
+585,Leavanny,Bug,Grass,Sewaddle,Level 20,Swadloon,Friendship,Leavanny
+586,Venipede,Bug,Poison,Venipede,Level 22,Whirlipede,Level 30,Scolipede
+587,Whirlipede,Bug,Poison,Venipede,Level 22,Whirlipede,Level 30,Scolipede
+588,Scolipede,Bug,Poison,Venipede,Level 22,Whirlipede,Level 30,Scolipede
+589,Cottonee,Grass,Fairy,Cottonee,Sun Stone,Whimsicott,Null,Null
+590,Whimsicott,Grass,Fairy,Cottonee,Sun Stone,Whimsicott,Null,Null
+591,Petilil,Grass,Null,Petilil,Sun Stone,Lilligant,Null,Null
+592,Lilligant,Grass,Null,Petilil,Sun Stone,Lilligant,Null,Null
+593,Basculin,Water,Null,Basculin,Null,Null,Null,Null
+594,Sandile,Ground,Dark,Sandile,Level 29,Krokorok,Level 40,Krookodile
+595,Krokorok,Ground,Dark,Sandile,Level 29,Krokorok,Level 40,Krookodile
+596,Krookodile,Ground,Dark,Sandile,Level 29,Krokorok,Level 40,Krookodile
+597,Darumaka,Fire,Null,Darumaka,Level 35,Darmanitan,Health under 50%,Darmanitan (zen mode)
+598,Darumaka (galar form),Ice,Null,Darumaka (galar form),Ice Stone,Darmanitan (galar form),Health under 50%,Daramnitan (galar zen mode)
+599,Darmanitan,Fire,Null,Darumaka,Level 35,Darmanitan,Health under 50%,Darmanitan (zen mode)
+600,Darmanitan (zen mode),Fire,Psychic,Darumaka,Level 35,Darmanitan,Health under 50%,Darmanitan (zen mode)
+601,Darmanitan (galar form),Ice,Null,Darumaka (galar form),Ice Stone,Darmanitan (galar form),Health under 50%,Daramnitan (galar zen mode)
+602,Daramnitan (galar zen mode),Ice,Fire,Darumaka (galar form),Ice Stone,Darmanitan (galar form),Health under 50%,Daramnitan (galar zen mode)
+603,Maractus,Grass,Null,Maractus,Null,Null,Null,Null
+604,Dwebble,Bug,Rock,Dwebble,Level 34,Crustle,Null,Null
+605,Crustle,Bug,Rock,Dwebble,Level 34,Crustle,Null,Null
+606,Scraggy,Dark,Fighting,Scraggy,Level 39,Scrafty,Null,Null
+607,Scrafty,Dark,Fighting,Scraggy,Level 39,Scrafty,Null,Null
+608,Sigilyph,Psychic,Flying,Sigilyph,Null,Null,Null,Null
+609,Yamask,Ghost,Null,Yamask,Level 34,Cofagrigus,Null,Null
+610,Yamask (galar form),Ghost,Ground,Yamask (galar form),Take 49 damage and travel under stone bridge in dusty bowl,Runerigus,Null,Null
+611,Cofagrigus,Ghost,Null,Yamask,Level 34,Cofagrigus,Null,Null
+612,Tirtouga,Water,Rock,Tirtouga,Level 37,Carracosta,Null,Null
+613,Carracosta,Water,Rock,Tirtouga,Level 37,Carracosta,Null,Null
+614,Archen,Rock,Flying,Archen,Level 37,Archeops,Null,Null
+615,Archeops,Rock,Flying,Archen,Level 37,Archeops,Null,Null
+616,Trubbish,Poison,Null,Trubbish,Level 36,Garbodor,Null,Null
+617,Garbodor,Poison,Null,Trubbish,Level 36,Garbodor,Null,Null
+618,Zorua,Dark,Null,Zorua,Level 30,Zoroark,Null,Null
+619,Zoroark,Dark,Null,Zorua,Level 30,Zoroark,Null,Null
+620,Minccino,Normal,Null,Minccino,Shiny Stone,Cinccino,Null,Null
+621,Cinccino,Normal,Null,Minccino,Shiny Stone,Cinccino,Null,Null
+622,Gothita,Psychic,Null,Gothita,Level 32,Gothorita,Level 41,Gothitelle
+623,Gothorita,Psychic,Null,Gothita,Level 32,Gothorita,Level 41,Gothitelle
+624,Gothitelle,Psychic,Null,Gothita,Level 32,Gothorita,Level 41,Gothitelle
+625,Solosis,Psychic,Null,Solosis,Level 32,Duosion,Level 41,Reuniclus
+626,Duosion,Psychic,Null,Solosis,Level 32,Duosion,Level 41,Reuniclus
+627,Reuniclus,Psychic,Null,Solosis,Level 32,Duosion,Level 41,Reuniclus
+628,Ducklett,Water,Flying,Ducklett,Level 35,Swanna,Null,Null
+629,Swanna,Water,Flying,Ducklett,Level 35,Swanna,Null,Null
+630,Vanillite,Ice,Null,Vanillite,Level 35,Vanillish,Level 47,Vanilluxe
+631,Vanillish,Ice,Null,Vanillite,Level 35,Vanillish,Level 47,Vanilluxe
+632,Vanilluxe,Ice,Null,Vanillite,Level 35,Vanillish,Level 47,Vanilluxe
+633,Deerling,Normal,Grass,Deerling,Level 34,Sawsbuck,Null,Null
+634,Sawsbuck,Normal,Grass,Deerling,Level 34,Sawsbuck,Null,Null
+635,Emolga,Electric,Flying,Emolga,Null,Null,Null,Null
+636,Karrablast,Bug,Null,Karrablast,Trade for Shelmet,Escavalier,Null,Null
+637,Escavalier,Bug,Steel,Karrablast,Trade for Shelmet,Escavalier,Null,Null
+638,Foongus,Grass,Poison,Foongus,Level 39,Amoonguss,Null,Null
+639,Amoonguss,Grass,Poison,Foongus,Level 39,Amoonguss,Null,Null
+640,Frillish (male),Water,Ghost,Frillish (male),Level 40,Jellicent (male),Null,Null
+641,Frillish (female),Water,Ghost,Frillish (female),Level 40,Jellicent (female),Null,Null
+642,Jellicent (male),Water,Ghost,Frillish (male),Level 40,Jellicent (male),Null,Null
+643,Jellicent (female),Water,Ghost,Frillish (female),Level 40,Jellicent (female),Null,Null
+644,Alomomola,Water,Null,Alomomola,Null,Null,Null,Null
+645,Joltik,Bug,Electric,Joltik,Level 36,Galvantula,Null,Null
+646,Galvantula,Bug,Electric,Joltik,Level 36,Galvantula,Null,Null
+647,Ferroseed,Grass,Steel,Ferroseed,Level 40,Ferrothorn,Null,Null
+648,Ferrothorn,Grass,Steel,Ferroseed,Level 40,Ferrothorn,Null,Null
+649,Klink,Steel,Null,Klink,Level 38,Klang,Level 49,Klinklang
+650,Klang,Steel,Null,Klink,Level 38,Klang,Level 49,Klinklang
+651,Klinklang,Steel,Null,Klink,Level 38,Klang,Level 49,Klinklang
+652,Tynamo,Electric,Null,Tynamo,Level 39,Eelektrik,Thunder Stone,Eelektross
+653,Eelektrik,Electric,Null,Tynamo,Level 39,Eelektrik,Thunder Stone,Eelektross
+654,Eelektross,Electric,Null,Tynamo,Level 39,Eelektrik,Thunder Stone,Eelektross
+655,Elgyem,Psychic,Null,Elgyem,Level 42,Beheeyem,Null,Null
+656,Beheeyem,Psychic,Null,Elgyem,Level 42,Beheeyem,Null,Null
+657,Litwick,Ghost,Fire,Litwick,Level 41,Lampent,Dusk Stone,Chandelure
+658,Lampent,Ghost,Fire,Litwick,Level 41,Lampent,Dusk Stone,Chandelure
+659,Chandelure,Ghost,Fire,Litwick,Level 41,Lampent,Dusk Stone,Chandelure
+660,Axew,Dragon,Null,Axew,Level 38,Fraxure,Level 48,Haxorus
+661,Fraxure,Dragon,Null,Axew,Level 38,Fraxure,Level 48,Haxorus
+662,Haxorus,Dragon,Null,Axew,Level 38,Fraxure,Level 48,Haxorus
+663,Cubchoo,Ice,Null,Cubchoo,Level 37,Beartic,Null,Null
+664,Beartic,Ice,Null,Cubchoo,Level 37,Beartic,Null,Null
+665,Cryogonal,Ice,Null,Cryogonal,Null,Null,Null,Null
+666,Shelmet,Bug,Null,Shelmet,Trade for Karrablast,Accelgor,Null,Null
+667,Accelgor,Bug,Null,Shelmet,Trade for Karrablast,Accelgor,Null,Null
+668,Stunfisk,Ground,Electric,Stunfisk,Null,Null,Null,Null
+669,Stunfisk (galar form),Ground,Steel,Stunfisk (galar form),Null,Null,Null,Null
+670,Mienfoo,Fighting,Null,Mienfoo,Level 50,Mienshao,Null,Null
+671,Mienshao,Fighting,Null,Mienfoo,Level 50,Mienshao,Null,Null
+672,Druddigon,Dragon,Null,Druddigon,Null,Null,Null,Null
+673,Golett,Ground,Ghost,Golett,Level 43,Golurk,Null,Null
+674,Golurk,Ground,Ghost,Golett,Level 43,Golurk,Null,Null
+675,Pawniard,Dark,Steel,Pawniard,Level 52,Bisharp,Null,Null
+676,Bisharp,Dark,Steel,Pawniard,Level 52,Bisharp,Null,Null
+677,Bouffalant,Normal,Null,Bouffalant,Null,Null,Null,Null
+678,Rufflet,Normal,Flying,Rufflet,Level 54,Braviary,Null,Null
+679,Braviary,Normal,Flying,Rufflet,Level 54,Braviary,Null,Null
+680,Vullaby,Dark,Flying,Vullaby,Level 54,Mandibuzz,Null,Null
+681,Mandibuzz,Dark,Flying,Vullaby,Level 54,Mandibuzz,Null,Null
+682,Heatmore,Fire,Null,Heatmore,Null,Null,Null,Null
+683,Durant,Bug,Steel,Durant,Null,Null,Null,Null
+684,Deino,Dark,Dragon,Deino,Level 50,Zweilous,Level 64,Hydreigon
+685,Zweilous,Dark,Dragon,Deino,Level 50,Zweilous,Level 64,Hydreigon
+686,Hydreigon,Dark,Dragon,Deino,Level 50,Zweilous,Level 64,Hydreigon
+687,Larvesta,Bug,Fire,Larvesta,Level 59,Volcarona,Null,Null
+688,Volcarona,Bug,Fire,Larvesta,Level 59,Volcarona,Null,Null
+689,Cobalion,Steel,Fighting,Cobalion,Null,Null,Null,Null
+690,Terrakion,Rock,Fighting,Terrakion,Null,Null,Null,Null
+691,Virizion,Grass,Fighting,Virizion,Null,Null,Null,Null
+692,Tornadus,Flying,Null,Tornadus,Null,Null,Null,Null
+693,Thundurus,Electric,Flying,Thundurus,Null,Null,Null,Null
+694,Reshiram,Dragon,Fire,Reshiram,Null,Null,Null,Null
+695,Zekrom,Dragon,Electric,Zekrom,Null,Null,Null,Null
+696,Landorus,Ground,Flying,Landorus,Null,Null,Null,Null
+697,Kyurem,Dragon,Ice,Kyurem,Null,Null,Null,Null
+698,Keldeo,Water,Fighting,Keldeo,Null,Null,Null,Null
+699,Meloetta (aria form),Normal,Psychic,Meloetta (aria form),Null,Null,Null,Null
+700,Meloetta (pirouette form),Normal,Fighting,Meloetta (pirouette form),Null,Null,Null,Null
+701,Genesect,Bug,Steel,Genesect,Null,Null,Null,Null
+702,Chespin,Grass,Null,Chespin,Level 16,Quilladin,Level 36,Chesnaught
+703,Quilladin,Grass,Null,Chespin,Level 16,Quilladin,Level 36,Chesnaught
+704,Chesnaught,Grass,Fighting,Chespin,Level 16,Quilladin,Level 36,Chesnaught
+705,Fennekin,Fire,Null,Fennekin,Level 16,Braixen,Level 36,Delphox
+706,Braixen,Fire,Null,Fennekin,Level 16,Braixen,Level 36,Delphox
+707,Delphox,Fire,Psychic,Fennekin,Level 16,Braixen,Level 36,Delphox
+708,Froakie,Water,Null,Froakie,Level 16,Frogadier,Level 36,Greninja
+709,Frogadier,Water,Null,Froakie,Level 16,Frogadier,Level 36,Greninja
+710,Greninja,Water,Dark,Froakie,Level 16,Frogadier,Level 36,Greninja
+711,Bunnelby,Normal,Null,Bunnelby,Level 20,Diggersby,Null,Null
+712,Diggersby,Normal,Ground,Bunnelby,Level 20,Diggersby,Null,Null
+713,Fletchling,Normal,Flying,Fletchling,Level 17,Fletchinder,Level 35,Talonflame
+714,Fletchinder,Fire,Flying,Fletchling,Level 17,Fletchinder,Level 35,Talonflame
+715,Talonflame,Fire,Flying,Fletchling,Level 17,Fletchinder,Level 35,Talonflame
+716,Scatterbug,Bug,Null,Scatterbug,Level 9,Spewpa,Level 12,Vivillon
+717,Spewpa,Bug,Null,Scatterbug,Level 9,Spewpa,Level 12,Vivillon
+718,Vivillon,Bug,Flying,Scatterbug,Level 9,Spewpa,Level 12,Vivillon
+719,Litleo,Fire,Normal,Litleo,Level 35,Pyroar,Null,Null
+720,Pyroar,Fire,Normal,Litleo,Level 35,Pyroar,Null,Null
+721,Flabebe,Fairy,Null,Flabebe,Level 19,Floette,Shiny Stone,Florges
+722,Floette,Fairy,Null,Flabebe,Level 19,Floette,Shiny Stone,Florges
+723,Florges,Fairy,Null,Flabebe,Level 19,Floette,Shiny Stone,Florges
+724,Skiddo,Grass,Null,Skiddo,Level 32,Gogoat,Null,Null
+725,Gogoat,Grass,Null,Skiddo,Level 32,Gogoat,Null,Null
+726,Pancham,Fighting,Null,Pancham,Level 32 with Dark type in party,Pangoro,Null,Null
+727,Pangoro,Fighting,Dark,Pancham,Level 32 with Dark type in party,Pangoro,Null,Null
+728,Furfrou,Normal,Null,Furfrou,Null,Null,Null,Null
+729,Espurr,Psychic,Null,Espurr,Level 25,Meowstic,Null,Null
+730,Meowstic,Psychic,Null,Espurr,Level 25,Meowstic,Null,Null
+731,Honedge,Steel,Ghost,Honedge,Level 35,Doublade,Dusk Stone,Aegislash
+732,Doublade,Steel,Ghost,Honedge,Level 35,Doublade,Dusk Stone,Aegislash
+733,Aegislash,Steel,Ghost,Honedge,Level 35,Doublade,Dusk Stone,Aegislash
+734,Spritzee,Fairy,Null,Spritzee,Trade holding Sachet,Aromatisse,Null,Null
+735,Aromatisse,Fairy,Null,Spritzee,Trade holding Sachet,Aromatisse,Null,Null
+736,Swirlix,Fairy,Null,Swirlix,Trade holding Whipped Dream,Slurpuff,Null,Null
+737,Slurpuff,Fairy,Null,Swirlix,Trade holding Whipped Dream,Slurpuff,Null,Null
+738,Inkay,Dark,Psychic,Inkay,Level 30 Holding system upside down,Malamar,Null,Null
+739,Malamar,Dark,Psychic,Inkay,Level 30 Holding system upside down,Malamar,Null,Null
+740,Binacle,Rock,Water,Binacle,Level 39,Barbaracle,Null,Null
+741,Barbaracle,Rock,Water,Binacle,Level 39,Barbaracle,Null,Null
+742,Skrelp,Poison,Water,Skrelp,Level 48,Dragalge,Null,Null
+743,Dragalge,Poison,Dragon,Skrelp,Level 48,Dragalge,Null,Null
+744,Clauncher,Water,Null,Clauncher,Level 37,Clawitzer,Null,Null
+745,Clawitzer,Water,Null,Clauncher,Level 37,Clawitzer,Null,Null
+746,Helioptile,Electric,Normal,Helioptile,Sun Stone,Heliolisk,Null,Null
+747,Heliolisk,Electric,Normal,Helioptile,Sun Stone,Heliolisk,Null,Null
+748,Tyrunt,Rock,Dragon,Tyrunt,Level 39 during day,Tyrantrum,Null,Null
+749,Tyrantrum,Rock,Dragon,Tyrunt,Level 39 during day,Tyrantrum,Null,Null
+750,Amaura,Rock,Ice,Amaura,Level 39 at night,Aurorus,Null,Null
+751,Aurorus,Rock,Ice,Amaura,Level 39 at night,Aurorus,Null,Null
+752,Sylveon,Fairy,Null,Eevee,Friendship and a Fairy type move,Sylveon,Null,Null
+753,Halwucha,Fighting,Flying,Halwucha,Null,Null,Null,Null
+754,Dedenna,Electric,Fairy,Dedenna,Null,Null,Null,Null
+755,Carbink,Rock,Fairy,Carbink,Null,Null,Null,Null
+756,Goomy,Dragon,Null,Goomy,Level 40,Sliggoo,Level 50 while raining or foggy,Goodra
+757,Sliggoo,Dragon,Null,Goomy,Level 40,Sliggoo,Level 50 while raining or foggy,Goodra
+758,Goodra,Dragon,Null,Goomy,Level 40,Sliggoo,Level 50 while raining or foggy,Goodra
+759,Klefki,Steel,Fairy,Klefki,Null,Null,Null,Null
+760,Phantump,Ghost,Grass,Phantump,Trade,Trevenant,Null,Null
+761,Trevenant,Ghost,Grass,Phantump,Trade,Trevenant,Null,Null
+762,Pumpkaboo,Ghost,Grass,Pumpkaboo,Trade,Gourgeist,Null,Null
+763,Gourgeist,Ghost,Grass,Pumpkaboo,Trade,Gourgeist,Null,Null
+764,Bergmite,Ice,Null,Bergmite,Level 37,Avalugg,Null,Null
+765,Avalugg,Ice,Null,Bergmite,Level 37,Avalugg,Null,Null
+766,Noibat,Flying,Dragon,Noibat,Level 48,Noivern,Null,Null
+767,Noivern,Flying,Dragon,Noibat,Level 48,Noivern,Null,Null
+768,Xerneas,Fairy,Null,Xerneas,Null,Null,Null,Null
+769,Yveltal,Dark,Flying,Yveltal,Null,Null,Null,Null
+770,Zygarde,Dragon,Ground,Zygarde,Null,Null,Null,Null
+771,Diancie,Rock,Fairy,Diancie,Null,Null,Null,Null
+772,Hoopa,Psychic,Ghost,Hoopa,Wait 3 days with prison bottle,Hoopa unbound,Null,Null
+773,Hoopa unbound,Psychic,Dark,Hoopa,Wait 3 days with prison bottle,Hoopa unbound,Null,Null
+774,Volvanion,Fire,Water,Volvanion,Null,Null,Null,Null
+775,Rowlet,Grass,Flying,Rowlet,Level 17,Dartrix,Level 34,Decidueye
+776,Dartrix,Grass,Flying,Rowlet,Level 17,Dartrix,Level 34,Decidueye
+777,Decidueye,Grass,Ghost,Rowlet,Level 17,Dartrix,Level 34,Decidueye
+778,Litten,Fire,Null,Litten,Level 17,Torracat,Level 34,Incineroar
+779,Torracat,Fire,Null,Litten,Level 17,Torracat,Level 34,Incineroar
+780,Incineroar,Fire,Dark,Litten,Level 17,Torracat,Level 34,Incineroar
+781,Popplio,Water,Null,Popplio,Level 17,Brionne,Level 34,Primarina
+782,Brionne,Water,Null,Popplio,Level 17,Brionne,Level 34,Primarina
+783,Primarina,Water,Fairy,Popplio,Level 17,Brionne,Level 34,Primarina
+784,Pikipek,Normal,Flying,Pikipek,Level 14,Trumbeak,Level 28,Toucannon
+785,Trumbeak,Normal,Flying,Pikipek,Level 14,Trumbeak,Level 28,Toucannon
+786,Toucannon,Normal,Flying,Pikipek,Level 14,Trumbeak,Level 28,Toucannon
+787,Yungoos,Normal,Null,Yungoos,Level 20 during day,Gumshoos,Null,Null
+788,Gumshoos,Normal,Null,Yungoos,Level 20 during day,Gumshoos,Null,Null
+789,Grubbin,Bug,Null,Grubbin,Level 20,Charjabug,Thunder Stone,Vikavolt
+790,Charjabug,Bug,Electric,Grubbin,Level 20,Charjabug,Thunder Stone,Vikavolt
+791,Vikavolt,Bug,Electric,Grubbin,Level 20,Charjabug,Thunder Stone,Vikavolt
+792,Crabrawler,Fighting,Null,Crabrawler,Level up at Mount Lanakila,Crabominable,Null,Null
+793,Crabominable,Fighting,Ice,Crabrawler,Level up at Mount Lanakila,Crabominable,Null,Null
+794,Oricorio,Fire,Flying,Oricorio,Red Nectar,Oricorio (baile),Null,Null
+795,Oricorio (baile),Fire,Flying,Oricorio,Red Nectar,Oricorio (baile),Null,Null
+796,Oricorio (pom-pom),Electric,Flying,Oricorio,Yellow Nectar,Oricorio (pom-pom),Null,Null
+797,Oricorio (pa'u),Psychic,Flying,Oricorio,Pink Nectar,Oricorio (pa'u),Null,Null
+798,Oricorio (sensu),Ghost,Flying,Oricorio,Purple Nectar,Oricorio (sensu),Null,Null
+799,Cutiefly,Bug,Fairy,Cutiefly,Level 25,Ribombee,Null,Null
+800,Ribombee,Bug,Fairy,Cutiefly,Level 25,Ribombee,Null,Null
+801,Rockruff,Rock,Null,Rockruff,Level 25,Lycanroc,Null,Null
+802,Lycanroc,Rock,Null,Rockruff,Level 25,Lycanroc,Null,Null
+803,Wishiwashi,Water,Null,Wishiwashi,Null,Null,Null,Null
+804,Mareanie,Poison,Water,Mareanie,Level 38,Toxapex,Null,Null
+805,Toxapex,Poison,Water,Mareanie,Level 38,Toxapex,Null,Null
+806,Mudbray,Ground,Null,Mudbray,Level 30,Mudsdale,Null,Null
+807,Mudsdale,Ground,Null,Mudbray,Level 30,Mudsdale,Null,Null
+808,Dewpider,Water,Bug,Dewpider,Level 22,Araquanid,Null,Null
+809,Araquanid,Water,Bug,Dewpider,Level 22,Araquanid,Null,Null
+810,Fomantis,Grass,Null,Fomantis,Level 34 during day,Lurantis,Null,Null
+811,Lurantis,Grass,Null,Fomantis,Level 34 during day,Lurantis,Null,Null
+812,Morelull,Grass,Fairy,Morelull,Level 24,Shiinotic,Null,Null
+813,Shiinotic,Grass,Fairy,Morelull,Level 24,Shiinotic,Null,Null
+814,Slandit,Poison,Fire,Slandit,Level 33 female,Salazzle,Null,Null
+815,Salazzle,Poison,Fire,Slandit,Level 33 female,Salazzle,Null,Null
+816,Stufful,Normal,Fighting,Stufful,Level 27,Bewear,Null,Null
+817,Bewear,Normal,Fighting,Stufful,Level 27,Bewear,Null,Null
+818,Bounsweet,Grass,Null,Bounsweet,Level 18,Steenee,Level up knowing stomp,Tsareena
+819,Steenee,Grass,Null,Bounsweet,Level 18,Steenee,Level up knowing stomp,Tsareena
+820,Tsareena,Grass,Null,Bounsweet,Level 18,Steenee,Level up knowing stomp,Tsareena
+821,Comfey,Fairy,Null,Comfey,Null,Null,Null,Null
+822,Oranguru,Normal,Psychic,Oranguru,Null,Null,Null,Null
+823,Passimian,Fighting,Null,Passimian,Null,Null,Null,Null
+824,Wimpod,Bug,Water,Wimpod,Level 30,Golisopod,Null,Null
+825,Golisopod,Bug,Water,Wimpod,Level 30,Golisopod,Null,Null
+826,Sandygast,Ghost,Ground,Sandygast,Level 42,Pallossand,Null,Null
+827,Pallossand,Ghost,Ground,Sandygast,Level 42,Pallossand,Null,Null
+828,Pyumuku,Water,Null,Pyumuku,Null,Null,Null,Null
+829,Type:Null,Normal,Null,Type:Null,Friendship,Silvally,Null,Null
+830,Silvally,Normal,Null,Type:Null,Friendship,Silvally,Null,Null
+831,Minior,Rock,Flying,Minior,Null,Null,Null,Null
+832,Komala,Normal,Null,Komala,Null,Null,Null,Null
+833,Turtonator,Fire,Dragon,Turtonator,Null,Null,Null,Null
+834,Togedemaru,Electric,Steel,Togedemaru,Null,Null,Null,Null
+835,Mimikyu,Ghost,Fairy,Mimikyu,Null,Null,Null,Null
+836,Bruxish,Water,Psychic,Bruxish,Null,Null,Null,Null
+837,Drampa,Normal,Dragon,Drampa,Null,Null,Null,Null
+838,Dhelmise,Ghost,Grass,Dhelmise,Null,Null,Null,Null
+839,Jangmo-o,Dragon,Null,Jangmo-o,Level 35,Hakamo-o,Level 45,Kommo-o
+840,Hakamo-o,Dragon,Fighting,Jangmo-o,Level 35,Hakamo-o,Level 45,Kommo-o
+841,Kommo-o,Dragon,Fighting,Jangmo-o,Level 35,Hakamo-o,Level 45,Kommo-o
+842,Tapu Koko,Electric,Fairy,Tapu Koko,Null,Null,Null,Null
+843,Tapu Lele,Psychic,Fairy,Tapu Lele,Null,Null,Null,Null
+844,Tapu Bulu,Grass,Fairy,Tapu Bulu,Null,Null,Null,Null
+845,Tapu Fini,Water,Fairy,Tapu Fini,Null,Null,Null,Null
+846,Cosmog,Psychic,Null,Cosmog,Level 43,Cosmoem,Level 53 (game dependent),Solgaleo
+847,Cosmoem,Psychic,Null,Cosmog,Level 43,Cosmoem,Level 53 (game dependent),Lunala
+848,Solgaleo,Psychic,Steel,Cosmog,Level 43,Cosmoem,"Level 53 (Sun, Ultra Sun, Sword)",Solgaleo
+849,Lunala,Psychic,Ghost,Cosmog,Level 43,Cosmoem,"Level 53 (Moon, Ultra Moon, Shield)",Lunala
+850,Nihilego,Rock,Poison,Nihilego,Null,Null,Null,Null
+851,Buzzwole,Bug,Fighting,Buzzwole,Null,Null,Null,Null
+852,Pheromosa,Bug,Fighting,Pheromosa,Null,Null,Null,Null
+853,Xurkitree,Electric,Null,Xurkitree,Null,Null,Null,Null
+854,Celesteela,Steel,Flying,Celesteela,Null,Null,Null,Null
+855,Kartana,Grass,Steel,Kartana,Null,Null,Null,Null
+856,Guzzlord,Dark,Dragon,Guzzlord,Null,Null,Null,Null
+857,Necrozma,Psychic,Null,Necrozma,Null,Null,Null,Null
+858,Magearna,Steel,Fairy,Magearna,Null,Null,Null,Null
+859,Marshadow,Fighting,Ghost,Marshadow,Null,Null,Null,Null
+860,Poipole,Poison,Null,Poipole,Level up knowing Dragon Pulse,Naganadel,Null,Null
+861,Naganadel,Poison,Dragon,Poipole,Level up knowing Dragon Pulse,Naganadel,Null,Null
+862,Stakataka,Rock,Steel,Stakataka,Null,Null,Null,Null
+863,Blacephalon,Fire,Ghost,Blacephalon,Null,Null,Null,Null
+864,Zeraora,Electric,Null,Zeraora,Null,Null,Null,Null
+865,Meltan,Steel,Null,Meltan,400 candy in Pokemon Go,Melmetal,Null,Null
+866,Melmetal,Steel,Null,Meltan,400 candy in Pokemon Go,Melmetal,Null,Null
+867,Grookey,Grass,Null,Grookey,Level 16,Thwackey,Level 35,Rillaboom
+868,Thwackey,Grass,Null,Grookey,Level 16,Thwackey,Level 35,Rillaboom
+869,Rillaboom,Grass,Null,Grookey,Level 16,Thwackey,Level 35,Rillaboom
+870,Scorbunny,Fire,Null,Scorbunny,Level 16,Raboot,Level 35,Cinderace
+871,Raboot,Fire,Null,Scorbunny,Level 16,Raboot,Level 35,Cinderace
+872,Cinderace,Fire,Null,Scorbunny,Level 16,Raboot,Level 35,Cinderace
+873,Sobble,Water,Null,Sobble,Level 16,Drizzile,Level 35,Inteleon
+874,Drizzile,Water,Null,Sobble,Level 16,Drizzile,Level 35,Inteleon
+875,Inteleon,Water,Null,Sobble,Level 16,Drizzile,Level 35,Inteleon
+876,Skwovet,Normal,Null,Skwovet,Level 24,Greedent,Null,Null
+877,Greedent,Normal,Null,Skwovet,Level 24,Greedent,Null,Null
+878,Rookidee,Flying,Null,Rookidee,Level 18,Corvisquire,Level 38,Corviknight
+879,Corvisquire,Flying,Null,Rookidee,Level 18,Corvisquire,Level 38,Corviknight
+880,Corviknight,Flying,Steel,Rookidee,Level 18,Corvisquire,Level 38,Corviknight
+881,Blipbug,Bug,Null,Blipbug,Level 10,Dottler,Level 30,Orbeetle
+882,Dottler,Bug,Psychic,Blipbug,Level 10,Dottler,Level 30,Orbeetle
+883,Orbeetle,Bug,Psychic,Blipbug,Level 10,Dottler,Level 30,Orbeetle
+884,Nickit,Dark,Null,Nickit,Level 18,Thievul,Null,Null
+885,Thievul,Dark,Null,Nickit,Level 18,Thievul,Null,Null
+886,Gossifleur,Grass,Null,Gossifleur,Level 20,Eldegoss,Null,Null
+887,Eldegoss,Grass,Null,Gossifleur,Level 20,Eldegoss,Null,Null
+888,Wooloo,Normal,Null,Wooloo,Level 24,Dubwool,Null,Null
+889,Dubwool,Normal,Null,Wooloo,Level 24,Dubwool,Null,Null
+890,Chewtle,Water,Null,Chewtle,Level 22,Drednaw,Null,Null
+891,Drednaw,Water,Rock,Chewtle,Level 22,Drednaw,Null,Null
+892,Yamper,Electric,Null,Yamper,Level 25,Boltund,Null,Null
+893,Boltund,Electric,Null,Yamper,Level 25,Boltund,Null,Null
+894,Rolycoly,Rock,Null,Rolycoly,Level 18,Carkol,Level 34,Coalossal
+895,Carkol,Rock,Fire,Rolycoly,Level 18,Carkol,Level 34,Coalossal
+896,Coalossal,Rock,Fire,Rolycoly,Level 18,Carkol,Level 34,Coalossal
+897,Applin,Grass,Dragon,Applin,Tart Apple (Applin),Flapple,Sweet Apple (Applin),Appletun
+898,Flapple,Grass,Dragon,Applin,Tart Apple,Flapple,Null,Null
+899,Appletun,Grass,Dragon,Applin,Sweet Apple,Appletun,Null,Null
+900,Sillicobra,Ground,Null,Sillicobra,Level 36,Sandaconda,Null,Null
+901,Sandaconda,Ground,Null,Sillicobra,Level 36,Sandaconda,Null,Null
+902,Cramorant,Flying,Water,Cramorant,Null,Null,Null,Null
+903,Arrokuda,Water,Null,Arrokuda,Level 26,Barraskewda,Null,Null
+904,Barraskewda,Water,Null,Arrokuda,Level 26,Barraskewda,Null,Null
+905,Toxel,Electric,Poison,Toxel,Level 30,Toxtricity,Null,Null
+906,Toxtricity,Electric,Poison,Toxel,Level 30,Toxtricity,Null,Null
+907,Sizzlipede,Fire,Bug,Sizzlipede,Level 28,Centiskorch,Null,Null
+908,Centiskorch,Fire,Bug,Sizzlipede,Level 28,Centiskorch,Null,Null
+909,Clobbopus,Fighting,Null,Clobbopus,Level up knowing Taunt,Grapploct,Null,Null
+910,Grapploct,Fighting,Null,Clobbopus,Level up knowing Taunt,Grapploct,Null,Null
+911,Sinistea,Ghost,Null,Sinistea,Cracked or Chipped Pot,Polteageist,Null,Null
+912,Polteageist,Ghost,Null,Sinistea,Cracked or Chipped Pot,Polteageist,Null,Null
+913,Hatenna,Psychic,Null,Hatenna,Level 32,Hattrem,Level 42,Hatterene
+914,Hattrem,Psychic,Null,Hatenna,Level 32,Hattrem,Level 42,Hatterene
+915,Hatterene,Psychic,Fairy,Hatenna,Level 32,Hattrem,Level 42,Hatterene
+916,Impidimp,Dark,Fairy,Impidimp,Level 32,Morgrem,Level 42,Grimmsnarl
+917,Morgrem,Dark,Fairy,Impidimp,Level 32,Morgrem,Level 42,Grimmsnarl
+918,Grimmsnarl,Dark,Fairy,Impidimp,Level 32,Morgrem,Level 42,Grimmsnarl
+919,Obstagoon,Dark,Normal,Zigzagoon (galar form),Level 20,Linoone (galar form),Level 35 at night,Obstagoon
+920,Perrserker,Steel,Null,Meowth (galar form),Level 28,Perrserker,Null,Null
+921,Cursola,Ghost,Null,Corsola (galar form),Level 38,Cursola,Null,Null
+922,Sirfetch'd,Fighting,Null,Farfetch'd (galar form),3 critical hit in one battle,Sirfetch'd,Null,Null
+923,Mr. Rime,Ice,Psychic,Mime Jr.,Level up knowing Mimic,Mr. Mime (galar form),Level 42,Mr. Rime
+924,Runerigus,Ground,Ghost,Yamask (galar form),Take 49 damage and travel under stone bridge in dusty bowl,Runerigus,Null,Null
+925,Milcery,Fairy,Null,Milcery,Spin holding a sweet,Alcremie,Null,Null
+926,Alcremie,Fairy,Null,Milcery,Spin holding a sweet,Alcremie,Null,Null
+927,Falinks,Fighting,Null,Falinks,Null,Null,Null,Null
+928,Pincurchin,Electric,Null,Pincurchin,Null,Null,Null,Null
+929,Snom,Ice,Bug,Snom,Friendship at night,Frosmoth,Null,Null
+930,Frosmoth,Ice,Bug,Snom,Friendship at night,Frosmoth,Null,Null
+931,Stonjourner,Rock,Null,Stonjourner,Null,Null,Null,Null
+932,Eiscue,Ice,Null,Eiscue,Null,Null,Null,Null
+933,Indeedee,Psychic,Normal,Indeedee,Null,Null,Null,Null
+934,Morpeko,Electric,Dark,Morpeko,Null,Null,Null,Null
+935,Cufant,Steel,Null,Cufant,Level 34,Copperajah,Null,Null
+936,Copperajah,Steel,Null,Cufant,Level 34,Copperajah,Null,Null
+937,Dracozolt,Electric,Dragon,Dracozolt,Fossilized Bird and Drake,Null,Null,Null
+938,Arctozolt,Electric,Ice,Arctozolt,Fossilized Bird and Dino,Null,Null,Null
+939,Dracovish,Water,Dragon,Dracovish,Fossilized Fish and Drake,Null,Null,Null
+940,Arctovish,Water,Ice,Arctovish,Fossilized Fish and Dino,Null,Null,Null
+941,Duraludon,Steel,Dragon,Duraludon,Null,Null,Null,Null
+942,Dreepy,Dragon,Ghost,Dreepy,Level 50,Drakloak,Level 60,Dragapult
+943,Drakloak,Dragon,Ghost,Dreepy,Level 50,Drakloak,Level 60,Dragapult
+944,Dragapult,Dragon,Ghost,Dreepy,Level 50,Drakloak,Level 60,Dragapult
+945,Zacian,Fairy,Null,Zacian,Hold Rusted Sword,Zacian (with sword),Null,Null
+946,Zacian (with sword),Fairy,Steel,Zacian,Hold Rusted Sword,Zacian (with sword),Null,Null
+947,Zamazenta,Fighting,Null,Zamazenta,Hold Rusted Shield,Zamazenta (with shield),Null,Null
+948,Zamazenta (with shield),Fighting,Steel,Zamazenta,Hold Rusted Shield,Zamazenta (with shield),Null,Null
+949,Eternatus,Poison,Dragon,Eternatus,Null,Null,Null,Null
