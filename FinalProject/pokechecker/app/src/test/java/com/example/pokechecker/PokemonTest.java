@@ -18,6 +18,7 @@ public class PokemonTest {
         pokemon.setStage2("Charmeleon");
         pokemon.setEvolve2("Level 32");
         pokemon.setStage3("Charizard");
+
         assertEquals(pokemon,pokemon);
     }
 
