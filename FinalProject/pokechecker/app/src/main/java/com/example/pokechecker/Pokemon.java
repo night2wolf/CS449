@@ -3,14 +3,16 @@ package com.example.pokechecker;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import java.util.List;
+
 // https://developer.android.com/training/data-storage/room
 @Entity(tableName = "pokemon")
 public class Pokemon {
     // _id,Name,Type1,Type2,Stage1,Evolve1,Stage2,Evolve2,Stage3
-    @PrimaryKey
-    public int uid;
-    @ColumnInfo(name = "_id")
-    private Integer id;
+    @PrimaryKey()
+    @ColumnInfo(name = "Id")
+    private Integer Id;
     @ColumnInfo(name = "Name")
     private String name;
     @ColumnInfo(name = "Type1")
@@ -27,36 +29,19 @@ public class Pokemon {
     private String evolve2;
     @ColumnInfo(name = "Stage3")
     private String stage3;
-    public int getUid() {
-        return uid;
-    }
-    public void setUid(int uid){
-        this.uid = uid;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getType1() {
-        return type1;
-    }
-    public String getType2() {
-        return type2;
-    }
-    public String getStage1() {
-        return stage1;
-    }
-    public String getStage2() {
-        return stage2;
-    }
-    public String getStage3() {
-        return stage3;
-    }
-    public String getEvolve1() {
-        return evolve1;
-    }
-    public String getEvolve2() {
-        return evolve2;
-    }
+
+    // _id,Name,Type1,Type2,Stage1,Evolve1,Stage2,Evolve2,Stage3
+    public Integer getId(){return Id;}
+    public String getName(){return name;}
+    public String getType1(){return type1;}
+    public String getType2(){return type2;}
+    public String getStage1(){return stage1;}
+    public String getEvolve1(){return evolve1;}
+    public String getStage2(){return stage2;}
+    public String getEvolve2(){return evolve2;}
+    public String getStage3(){return stage3;}
+    // _id,Name,Type1,Type2,Stage1,Evolve1,Stage2,Evolve2,Stage3
+    public void setId(Integer Id) {}
     public void setName(String name){
         this.name = name;
     }
@@ -69,23 +54,15 @@ public class Pokemon {
     public void setStage1(String stage1) {
         this.stage1 = stage1;
     }
-    public void setStage2(String stage2) {
-        this.stage2 = stage2;
-    }
-    public void setStage3(String stage3) {
-        this.stage3 = stage3;
-    }
     public void setEvolve1(String evolve1) {
         this.evolve1 = evolve1;
+    }
+    public void setStage2(String stage2) {
+        this.stage2 = stage2;
     }
     public void setEvolve2(String evolve2) {
         this.evolve2 = evolve2;
     }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public Integer getId() {
-        return id;
-    }
+    public void setStage3(String stage3) {this.stage3 = stage3;}
 }
 

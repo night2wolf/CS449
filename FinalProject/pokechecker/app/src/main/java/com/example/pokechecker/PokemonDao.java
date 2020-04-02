@@ -11,11 +11,9 @@ import java.util.List;
 //https://developer.android.com/training/data-storage/room
 @Dao
 public interface PokemonDao {
-    @Query("SELECT * FROM pokemon")
+    @Query("SELECT * FROM Pokemon;")
     List<Pokemon> getAll();
-    @Query("SELECT * FROM pokemon WHERE uid IN (:userIds)")
-    List<Pokemon> loadAllByIds(int[] userIds);
-    @Query("SELECT * FROM pokemon WHERE Name LIKE :name LIMIT 1")
+    @Query("SELECT * FROM Pokemon WHERE Name LIKE :name LIMIT 1;")
     Pokemon findByName(String name);
     @Insert
     void insertAll(Pokemon... pokemons);
