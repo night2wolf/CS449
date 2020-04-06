@@ -1,5 +1,6 @@
 package com.example.pokechecker;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -11,6 +12,7 @@ import java.util.List;
 public class Pokemon {
     // _id,Name,Type1,Type2,Stage1,Evolve1,Stage2,Evolve2,Stage3
     @PrimaryKey()
+    @NonNull
     @ColumnInfo(name = "Id")
     private Integer Id;
     @ColumnInfo(name = "Name")

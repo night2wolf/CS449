@@ -7,4 +7,5 @@ import androidx.room.RoomDatabase;
 @Database(entities = {Pokemon.class}, version = 1)
 public abstract class PokeDatabase extends RoomDatabase {
     public abstract PokemonDao pokemonDao();
+
 }

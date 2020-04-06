@@ -6,8 +6,10 @@ import androidx.room.RawQuery;
 import androidx.room.Room;
 import androidx.sqlite.db.SimpleSQLiteQuery;
 
+import android.app.Activity;
 import android.content.Context;
 import android.media.Image;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -20,6 +22,7 @@ import android.widget.TextView;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         PokeDatabase db = Room.databaseBuilder(getApplicationContext(),
-                PokeDatabase.class, "pokedb")
+                PokeDatabase.class, "Pokemon")
                 .createFromAsset("databases/Pokemon.db")
                 .build();
         final PokemonDao pokemonDao = db.pokemonDao();
@@ -49,8 +52,10 @@ public class MainActivity extends AppCompatActivity {
                 TextView strength = findViewById(R.id.strtypeTxt);
                 TextView type = findViewById(R.id.typeTxt);
                 type.append(findPoke.getType1());
-                type.append(" , ");
-                type.append(findPoke.getType2());
+                if (findPoke.getType2() != "Null") {
+                    type.append(" , ");
+                    type.append(findPoke.getType2());
+                }
                 TextView evolve1 = findViewById(R.id.evolve1Txtview);
                 evolve1.append(findPoke.getEvolve1());
                 TextView evolve2 = findViewById(R.id.evolve2Textview);
