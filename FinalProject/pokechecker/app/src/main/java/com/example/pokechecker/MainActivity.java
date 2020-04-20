@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,20 +59,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    //TODO: REFACTOR: maybe move this function into a different class?
     public void fillElements(Pokemon findPoke) {
         // Lazy NULL Check //TODO: Popup message of pokemon not found
         if (findPoke != null) {
-            // TODO: Display results of SQL Search into appropriate elements
-            TextView type = findViewById(R.id.typeTxt);
-            String typetext = "";
+            // Display name. we don't need to check for Null because the object wouldn't exist.
+            TextView pokeTxt = findViewById(R.id.pokeTxt);
+            pokeTxt.setText(findPoke.getName());
+            pokeTxt.setVisibility(View.VISIBLE);
+
             // Display the Pokemon Types
-            typetext = findPoke.getType1();
+            // There is always a first type so we don't need to check for null
+            TextView typeTxt = findViewById(R.id.typeTxt);
+            String typeText = findPoke.getType1();
             if (!findPoke.getType2().equals("Null")) {
-                typetext += " , ";
-                typetext += findPoke.getType2();
+                typeText += " , ";
+                typeText += findPoke.getType2();
+                typeTxt.setText(typeText);
+                typeTxt.setVisibility(View.VISIBLE);
             }
-            type.setText(typetext);
-            type.setVisibility(View.VISIBLE);
+            else {
+                typeTxt.setText(typeText);
+                typeTxt.setVisibility(View.VISIBLE);
+            }
+
             //Display Pokemon First Evolve Requirements
             TextView evolve1 = findViewById(R.id.evolve1Txtview);
             if (!findPoke.getEvolve1().equals("Null")) {
@@ -89,25 +101,64 @@ public class MainActivity extends AppCompatActivity {
                 // Hide the Text if there is none
                 evolve2.setVisibility(View.INVISIBLE);
             }
+            // Display Evolve1 image and Name
             ImageButton stage1Btn = findViewById((R.id.stage1Pic));
             if (!findPoke.getStage1().equals("Null")) {
                 //TODO: Set the picture of the button to the appropriate picture
                 stage1Btn.setContentDescription(findPoke.getStage1());
             }
+            TextView stage1Txt = findViewById(R.id.stage1Txt);
+            if (!findPoke.getStage1().equals("Null")) {
+                stage1Txt.setText(findPoke.getStage1());
+                stage1Txt.setVisibility(View.VISIBLE);
+            } else {
+                // Hide the Text if there is none
+                stage1Txt.setVisibility(View.INVISIBLE);
+            }
+            // Display Evolve2 image and Name
             ImageButton stage2Btn = findViewById(R.id.stage2Pic);
             if (!findPoke.getStage2().equals("Null")) {
                 //TODO: Set the picture of the button to the appropriate picture
                 stage2Btn.setContentDescription(findPoke.getStage2());
             }
+            TextView stage2Txt = findViewById(R.id.stage2Txt);
+            if (!findPoke.getStage2().equals("Null")) {
+                stage2Txt.setText(findPoke.getStage2());
+                stage2Txt.setVisibility(View.VISIBLE);
+            } else {
+                // Hide the Text if there is none
+                stage2Txt.setVisibility(View.INVISIBLE);
+            }
+            // Display Evolve3 image and Name
             ImageButton stage3Btn = findViewById(R.id.stage3Pic);
             if (!findPoke.getStage3().equals("Null")) {
                 //TODO: Set the picture of the button to the appropriate picture
                 stage3Btn.setContentDescription(findPoke.getStage3());
             }
-
-            //TODO: Weak / Strength algorithm display results
+            TextView stage3Txt = findViewById(R.id.stage3Txt);
+            if (!findPoke.getStage3().equals("Null")) {
+                stage3Txt.setText(findPoke.getStage3());
+                stage3Txt.setVisibility(View.VISIBLE);
+            } else {
+                // Hide the Text if there is none
+                stage3Txt.setVisibility(View.INVISIBLE);
+            }
+            //TODO: Weak / Strength algorithm display results, should be function in different class.
+            TypeChecker typeChecker = new TypeChecker();
             TextView weakness = findViewById(R.id.weaktypeTxt);
             TextView strength = findViewById(R.id.strtypeTxt);
+            // Check the strength and convert it to a string for display
+            String strengths1 = typeChecker.convertStringList(typeChecker.getStrength(findPoke.getType1()));
+            // if there is a second type, add it's weaknesses as well
+            // TODO: logic to check for duplicate types in weak1 / weak 2 arrays
+            if (!findPoke.getType2().equals("Null")) {
+                String strengths2 = typeChecker.convertStringList(typeChecker.getStrength(findPoke.getType1()));
+                strength.setText(strengths1 + ","+ strengths2);
+            }
+            else {
+                strength.setText(strengths1);
+            }
+            strength.setVisibility(View.VISIBLE);
 
         }
 

@@ -5,6 +5,8 @@ import android.content.Context;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
+import java.util.List;
+
 public class Pokechecker{
     public Pokemon findPokemon(Context context, String pokeName){
         Pokemon findPoke = new Pokemon();
@@ -18,4 +20,5 @@ public class Pokechecker{
 
         return findPoke;
     }
+
 }
