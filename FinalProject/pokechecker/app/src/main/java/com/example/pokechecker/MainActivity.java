@@ -149,16 +149,21 @@ public class MainActivity extends AppCompatActivity {
             TextView strength = findViewById(R.id.strtypeTxt);
             // Check the strength and convert it to a string for display
             String strengths1 = typeChecker.convertStringList(typeChecker.getStrength(findPoke.getType1()));
+            String weakness1 = typeChecker.convertStringList(typeChecker.getWeakness(findPoke.getType1()));
             // if there is a second type, add it's weaknesses as well
             // TODO: logic to check for duplicate types in weak1 / weak 2 arrays
             if (!findPoke.getType2().equals("Null")) {
-                String strengths2 = typeChecker.convertStringList(typeChecker.getStrength(findPoke.getType1()));
+                String strengths2 = typeChecker.convertStringList(typeChecker.getStrength(findPoke.getType2()));
+                String weakness2 = typeChecker.convertStringList(typeChecker.getWeakness(findPoke.getType2()));
                 strength.setText(strengths1 + ","+ strengths2);
+                weakness.setText(weakness1 + "," + weakness2);
             }
             else {
                 strength.setText(strengths1);
+                weakness.setText(weakness1);
             }
             strength.setVisibility(View.VISIBLE);
+            weakness.setVisibility(View.VISIBLE);
 
         }
 
