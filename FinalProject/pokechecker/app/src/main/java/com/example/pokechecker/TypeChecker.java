@@ -102,9 +102,96 @@ public class TypeChecker {
         return strTypes;
     }
     // TODO: finish writing out weakness once test is complete
-    public List<String> getWeakness(String type){
+    public List<String> getWeakness(String type) {
         List<String> weakTypes = new ArrayList<>();
-        switch (type){
+        switch (type) {
+            case "Normal":
+                weakTypes.add("Fighting");
+                break;
+            case "Fire":
+                weakTypes.add("Water");
+                weakTypes.add("Ground");
+                weakTypes.add("Rock");
+                break;
+            case "Water":
+                weakTypes.add("Grass");
+                weakTypes.add("Electric");
+                break;
+            case "Grass":
+                weakTypes.add("Fire");
+                weakTypes.add("Ice");
+                weakTypes.add("Poison");
+                weakTypes.add("Flying");
+                weakTypes.add("Bug");
+                break;
+            case "Electric":
+                weakTypes.add("Ground");
+                break;
+            case "Ice":
+                weakTypes.add("Fire");
+                weakTypes.add("Fighting");
+                weakTypes.add("Rock");
+                weakTypes.add("Steel");
+                break;
+            case "Fighting":
+                weakTypes.add("Flying");
+                weakTypes.add("Psychic");
+                weakTypes.add("Fairy");
+                break;
+            case "Poison":
+                weakTypes.add("Ground");
+                weakTypes.add("Psychic");
+                break;
+            case "Ground":
+                weakTypes.add("Water");
+                weakTypes.add("Grass");
+                weakTypes.add("Ice");
+                break;
+            case "Flying":
+                weakTypes.add("Electric");
+                weakTypes.add("Ice");
+                weakTypes.add("Rock");
+                break;
+            case "Psychic":
+                weakTypes.add("Bug");
+                weakTypes.add("Ghost");
+                weakTypes.add("Dark");
+                break;
+            case "Bug":
+                weakTypes.add("Fire");
+                weakTypes.add("Flying");
+                weakTypes.add("Rock");
+                break;
+            case "Rock":
+                weakTypes.add("Water");
+                weakTypes.add("Grass");
+                weakTypes.add("Fighting");
+                weakTypes.add("Ground");
+                weakTypes.add("Steel");
+                break;
+            case "Ghost":
+                weakTypes.add("Ghost");
+                weakTypes.add("Dark");
+                break;
+            case "Dragon":
+                weakTypes.add("Ice");
+                weakTypes.add("Dragon");
+                weakTypes.add("Fairy");
+                break;
+            case "Dark":
+                weakTypes.add("Fighting");
+                weakTypes.add("Bug");
+                weakTypes.add("Fairy");
+                break;
+            case "Steel":
+                weakTypes.add("Fire");
+                weakTypes.add("Fighting");
+                weakTypes.add("Ground");
+                break;
+            case "Fairy":
+                weakTypes.add("Poison");
+                weakTypes.add("Steel");
+                break;
             default:
                 weakTypes.add("Null");
                 break;

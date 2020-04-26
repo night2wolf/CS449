@@ -44,17 +44,18 @@ public class WeaknessTypeTest {
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
-    //TODO: Continue from here fix types
     @Test
     public void weaknessGrassTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Water");
-        actualList.add("Ground");
-        actualList.add("Rock");
+        actualList.add("Fire");
+        actualList.add("Ice");
+        actualList.add("Poison");
+        actualList.add("Flying");
+        actualList.add("Bug");
         List<String> strList = typeChecker.getWeakness("Grass");
         assertEquals(actualList,strList);
-        String strString = "Water,Ground,Rock";
+        String strString = "Fire,Ice,Poison,Flying,Bug";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -62,11 +63,10 @@ public class WeaknessTypeTest {
     public void weaknessElectricTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Water");
-        actualList.add("Flying");
+        actualList.add("Ground");
         List<String> strList = typeChecker.getWeakness("Electric");
         assertEquals(actualList,strList);
-        String strString = "Water,Flying";
+        String strString = "Ground";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -74,13 +74,13 @@ public class WeaknessTypeTest {
     public void weaknessIceTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Grass");
-        actualList.add("Ground");
-        actualList.add("Flying");
-        actualList.add("Dragon");
+        actualList.add("Fire");
+        actualList.add("Fighting");
+        actualList.add("Rock");
+        actualList.add("Steel");
         List<String> strList = typeChecker.getWeakness("Ice");
         assertEquals(actualList,strList);
-        String strString = "Grass,Ground,Flying,Dragon";
+        String strString = "Fire,Fighting,Rock,Steel";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -88,14 +88,12 @@ public class WeaknessTypeTest {
     public void weaknessFightingTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Normal");
-        actualList.add("Ice");
-        actualList.add("Rock");
-        actualList.add("Dark");
-        actualList.add("Steel");
+        actualList.add("Flying");
+        actualList.add("Psychic");
+        actualList.add("Fairy");
         List<String> strList = typeChecker.getWeakness("Fighting");
         assertEquals(actualList,strList);
-        String strString = "Normal,Ice,Rock,Dark,Steel";
+        String strString = "Flying,Psychic,Fairy";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -103,11 +101,11 @@ public class WeaknessTypeTest {
     public void weaknessPoisonTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Grass");
-        actualList.add("Fairy");
+        actualList.add("Ground");
+        actualList.add("Psychic");
         List<String> strList = typeChecker.getWeakness("Poison");
         assertEquals(actualList,strList);
-        String strString = "Grass,Fairy";
+        String strString = "Ground,Psychic";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -115,14 +113,12 @@ public class WeaknessTypeTest {
     public void weaknessGroundTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Fire");
-        actualList.add("Electric");
-        actualList.add("Poison");
-        actualList.add("Rock");
-        actualList.add("Steel");
+        actualList.add("Water");
+        actualList.add("Grass");
+        actualList.add("Ice");
         List<String> strList = typeChecker.getWeakness("Ground");
         assertEquals(actualList,strList);
-        String strString = "Fire,Electric,Poison,Rock,Steel";
+        String strString = "Water,Grass,Ice";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -130,12 +126,12 @@ public class WeaknessTypeTest {
     public void weaknessFlyingTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Grass");
-        actualList.add("Fighting");
-        actualList.add("Bug");
+        actualList.add("Electric");
+        actualList.add("Ice");
+        actualList.add("Rock");
         List<String> strList = typeChecker.getWeakness("Flying");
         assertEquals(actualList,strList);
-        String strString = "Grass,Fighting,Bug";
+        String strString = "Electric,Ice,Rock";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -143,11 +139,12 @@ public class WeaknessTypeTest {
     public void weaknessPsychicTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Fighting");
-        actualList.add("Poison");
+        actualList.add("Bug");
+        actualList.add("Ghost");
+        actualList.add("Dark");
         List<String> strList = typeChecker.getWeakness("Psychic");
         assertEquals(actualList,strList);
-        String strString = "Fighting,Poison";
+        String strString = "Bug,Ghost,Dark";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -155,12 +152,12 @@ public class WeaknessTypeTest {
     public void weaknessBugTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Grass");
-        actualList.add("Psychic");
-        actualList.add("Dark");
+        actualList.add("Fire");
+        actualList.add("Flying");
+        actualList.add("Rock");
         List<String> strList = typeChecker.getWeakness("Bug");
         assertEquals(actualList,strList);
-        String strString = "Grass,Psychic,Dark";
+        String strString = "Fire,Flying,Rock";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -168,13 +165,14 @@ public class WeaknessTypeTest {
     public void weaknessRockTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Fire");
-        actualList.add("Ice");
-        actualList.add("Flying");
-        actualList.add("Bug");
+        actualList.add("Water");
+        actualList.add("Grass");
+        actualList.add("Fighting");
+        actualList.add("Ground");
+        actualList.add("Steel");
         List<String> strList = typeChecker.getWeakness("Rock");
         assertEquals(actualList,strList);
-        String strString = "Fire,Ice,Flying,Bug";
+        String strString = "Water,Grass,Fighting,Ground,Steel";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -182,11 +180,11 @@ public class WeaknessTypeTest {
     public void weaknessGhostTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Psychic");
         actualList.add("Ghost");
+        actualList.add("Dark");
         List<String> strList = typeChecker.getWeakness("Ghost");
         assertEquals(actualList,strList);
-        String strString = "Psychic,Ghost";
+        String strString = "Ghost,Dark";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -194,10 +192,12 @@ public class WeaknessTypeTest {
     public void weaknessDragonTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
+        actualList.add("Ice");
         actualList.add("Dragon");
+        actualList.add("Fairy");
         List<String> strList = typeChecker.getWeakness("Dragon");
         assertEquals(actualList,strList);
-        String strString = "Dragon";
+        String strString = "Ice,Dragon,Fairy";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -205,11 +205,12 @@ public class WeaknessTypeTest {
     public void weaknessDarkTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Psychic");
-        actualList.add("Ghost");
+        actualList.add("Fighting");
+        actualList.add("Bug");
+        actualList.add("Fairy");
         List<String> strList = typeChecker.getWeakness("Dark");
         assertEquals(actualList,strList);
-        String strString = "Psychic,Ghost";
+        String strString = "Fighting,Bug,Fairy";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -217,12 +218,12 @@ public class WeaknessTypeTest {
     public void weaknessSteelTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Ice");
-        actualList.add("Rock");
-        actualList.add("Fairy");
+        actualList.add("Fire");
+        actualList.add("Fighting");
+        actualList.add("Ground");
         List<String> strList = typeChecker.getWeakness("Steel");
         assertEquals(actualList,strList);
-        String strString = "Ice,Rock,Fairy";
+        String strString = "Fire,Fighting,Ground";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
@@ -230,12 +231,11 @@ public class WeaknessTypeTest {
     public void weaknessFairyTest(){
         TypeChecker typeChecker = new TypeChecker();
         List<String> actualList = new ArrayList<>();
-        actualList.add("Fighting");
-        actualList.add("Dragon");
-        actualList.add("Dark");
+        actualList.add("Poison");
+        actualList.add("Steel");
         List<String> strList = typeChecker.getWeakness("Fairy");
         assertEquals(actualList,strList);
-        String strString = "Fighting,Dragon,Dark";
+        String strString = "Poison,Steel";
         String actualStrString = typeChecker.convertStringList(strList);
         assertEquals(actualStrString,strString);
     }
