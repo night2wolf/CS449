@@ -67,7 +67,12 @@ public class MainActivity extends AppCompatActivity {
             TextView pokeTxt = findViewById(R.id.pokeTxt);
             pokeTxt.setText(findPoke.getName());
             pokeTxt.setVisibility(View.VISIBLE);
-
+            ImageView pokePicture = findViewById(R.id.pokePicture);
+            // String manipulation to remove parentheses and add underscores for alolan/galar forms.
+            String fixname = findPoke.getName().replaceAll("[()]", "");
+            fixname = fixname.replaceAll(" ","_").toLowerCase();
+            int resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
+            pokePicture.setImageResource(resID);
             // Display the Pokemon Types
             // There is always a first type so we don't need to check for null
             TextView typeTxt = findViewById(R.id.typeTxt);
@@ -106,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
             if (!findPoke.getStage1().equals("Null")) {
                 //TODO: Set the picture of the button to the appropriate picture
                 stage1Btn.setContentDescription(findPoke.getStage1());
+                // String manipulation to remove parentheses and add underscores for alolan/galar forms.
+                fixname = findPoke.getStage1().replaceAll("[()]", "");
+                fixname = fixname.replaceAll(" ","_").toLowerCase();
+                resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
+                stage1Btn.setImageResource(resID);
             }
             TextView stage1Txt = findViewById(R.id.stage1Txt);
             if (!findPoke.getStage1().equals("Null")) {
@@ -120,6 +130,11 @@ public class MainActivity extends AppCompatActivity {
             if (!findPoke.getStage2().equals("Null")) {
                 //TODO: Set the picture of the button to the appropriate picture
                 stage2Btn.setContentDescription(findPoke.getStage2());
+                // String manipulation to remove parentheses and add underscores for alolan/galar forms.
+                fixname = findPoke.getStage2().replaceAll("[()]", "");
+                fixname = fixname.replaceAll(" ","_").toLowerCase();
+                resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
+                stage2Btn.setImageResource(resID);
             }
             TextView stage2Txt = findViewById(R.id.stage2Txt);
             if (!findPoke.getStage2().equals("Null")) {
@@ -134,6 +149,13 @@ public class MainActivity extends AppCompatActivity {
             if (!findPoke.getStage3().equals("Null")) {
                 //TODO: Set the picture of the button to the appropriate picture
                 stage3Btn.setContentDescription(findPoke.getStage3());
+                stage2Btn.setContentDescription(findPoke.getStage2());
+                // String manipulation to remove parentheses and add underscores for alolan/galar forms.
+                fixname = findPoke.getStage3().replaceAll("[()]", "");
+                fixname = fixname.replaceAll(" ","_").toLowerCase();
+                resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
+                stage3Btn.setImageResource(resID);
+
             }
             TextView stage3Txt = findViewById(R.id.stage3Txt);
             if (!findPoke.getStage3().equals("Null")) {
@@ -143,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 // Hide the Text if there is none
                 stage3Txt.setVisibility(View.INVISIBLE);
             }
-            //TODO: Weak / Strength algorithm display results, should be function in different class.
+
             TypeChecker typeChecker = new TypeChecker();
             TextView weakness = findViewById(R.id.weaktypeTxt);
             TextView strength = findViewById(R.id.strtypeTxt);

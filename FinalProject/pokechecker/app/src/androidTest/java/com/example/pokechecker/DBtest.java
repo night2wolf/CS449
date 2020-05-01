@@ -14,7 +14,7 @@ public class DBtest {
             PokeDatabase db;
             Context context = ApplicationProvider.getApplicationContext();
             db = Room.databaseBuilder(context,
-                    PokeDatabase.class,"Pokemon")
+                    PokeDatabase.class, "Pokemon")
                     .createFromAsset("databases/Pokemon.db")
                     .build();
             PokemonDao pokemonDao = db.pokemonDao();

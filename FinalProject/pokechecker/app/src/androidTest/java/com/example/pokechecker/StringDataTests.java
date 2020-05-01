@@ -1,6 +1,5 @@
 package com.example.pokechecker;
 import android.content.Context;
-import android.widget.TextView;
 
 import androidx.room.Room;
 import androidx.test.core.app.ApplicationProvider;
@@ -15,7 +14,7 @@ public class StringDataTests {
         PokeDatabase db;
         Context context = ApplicationProvider.getApplicationContext();
         db = Room.databaseBuilder(context,
-                PokeDatabase.class,"Pokemon")
+                PokeDatabase.class, "Pokemon")
                 .createFromAsset("databases/Pokemon.db")
                 .build();
         PokemonDao pokemonDao = db.pokemonDao();
@@ -36,7 +35,7 @@ public class StringDataTests {
         PokeDatabase db;
         Context context = ApplicationProvider.getApplicationContext();
         db = Room.databaseBuilder(context,
-                PokeDatabase.class,"Pokemon")
+                PokeDatabase.class, "Pokemon")
                 .createFromAsset("databases/Pokemon.db")
                 .build();
         PokemonDao pokemonDao = db.pokemonDao();

@@ -2,10 +2,7 @@ package com.example.pokechecker;
 
 import android.content.Context;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
-
-import java.util.List;
 
 public class Pokechecker{
     public Pokemon findPokemon(Context context, String pokeName){
