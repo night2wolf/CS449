@@ -69,7 +69,11 @@ public class MainActivity extends AppCompatActivity {
             pokeTxt.setVisibility(View.VISIBLE);
             ImageView pokePicture = findViewById(R.id.pokePicture);
             // String manipulation to remove parentheses and add underscores for alolan/galar forms.
+            //TODO: REFACTOR: Pull this out and make it a function call in a seperate class. (probably some utility class)
             String fixname = findPoke.getName().replaceAll("[()]", "");
+            fixname = fixname.replaceAll(".","_");
+            fixname = fixname.replaceAll("'","");
+            fixname = fixname.replaceAll("-","_");
             fixname = fixname.replaceAll(" ","_").toLowerCase();
             int resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
             pokePicture.setImageResource(resID);
@@ -109,10 +113,12 @@ public class MainActivity extends AppCompatActivity {
             // Display Evolve1 image and Name
             ImageButton stage1Btn = findViewById((R.id.stage1Pic));
             if (!findPoke.getStage1().equals("Null")) {
-                //TODO: Set the picture of the button to the appropriate picture
                 stage1Btn.setContentDescription(findPoke.getStage1());
                 // String manipulation to remove parentheses and add underscores for alolan/galar forms.
                 fixname = findPoke.getStage1().replaceAll("[()]", "");
+                fixname = fixname.replaceAll(".","_");
+                fixname = fixname.replaceAll("'","");
+                fixname = fixname.replaceAll("-","_");
                 fixname = fixname.replaceAll(" ","_").toLowerCase();
                 resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
                 stage1Btn.setImageResource(resID);
@@ -128,10 +134,12 @@ public class MainActivity extends AppCompatActivity {
             // Display Evolve2 image and Name
             ImageButton stage2Btn = findViewById(R.id.stage2Pic);
             if (!findPoke.getStage2().equals("Null")) {
-                //TODO: Set the picture of the button to the appropriate picture
                 stage2Btn.setContentDescription(findPoke.getStage2());
                 // String manipulation to remove parentheses and add underscores for alolan/galar forms.
                 fixname = findPoke.getStage2().replaceAll("[()]", "");
+                fixname = fixname.replaceAll(".","_");
+                fixname = fixname.replaceAll("'","");
+                fixname = fixname.replaceAll("-","_");
                 fixname = fixname.replaceAll(" ","_").toLowerCase();
                 resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
                 stage2Btn.setImageResource(resID);
@@ -147,11 +155,13 @@ public class MainActivity extends AppCompatActivity {
             // Display Evolve3 image and Name
             ImageButton stage3Btn = findViewById(R.id.stage3Pic);
             if (!findPoke.getStage3().equals("Null")) {
-                //TODO: Set the picture of the button to the appropriate picture
                 stage3Btn.setContentDescription(findPoke.getStage3());
                 stage2Btn.setContentDescription(findPoke.getStage2());
                 // String manipulation to remove parentheses and add underscores for alolan/galar forms.
                 fixname = findPoke.getStage3().replaceAll("[()]", "");
+                fixname = fixname.replaceAll(".","_");
+                fixname = fixname.replaceAll("'","");
+                fixname = fixname.replaceAll("-","_");
                 fixname = fixname.replaceAll(" ","_").toLowerCase();
                 resID = getResources().getIdentifier(fixname,"drawable",getPackageName());
                 stage3Btn.setImageResource(resID);
